@@ -5,6 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   reactStrictMode: true,
+  devIndicators: false,
 };
 
 export default nextConfig;
