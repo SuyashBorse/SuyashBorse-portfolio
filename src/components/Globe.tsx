@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, forwardRef, useImperativeHandle } from "react";
 import createGlobe from "cobe";
 
 // Maharashtra, India coordinates
@@ -10,15 +10,11 @@ const MAHARASHTRA_LON = 75.7139;
 const INDIA_PHI = 3.39;
 const INITIAL_THETA = 0.18;
 
-export interface GlobeRef {
+export interface GlobeHandle {
   focusIndia: () => void;
 }
 
-export default function Globe({
-  onFocusReady,
-}: {
-  onFocusReady?: (focusFn: () => void) => void;
-}) {
+const Globe = forwardRef<GlobeHandle, {}>((_, ref) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
@@ -30,11 +26,9 @@ export default function Globe({
     pointerInteractionMovement.current = 0;
   };
 
-  useEffect(() => {
-    if (onFocusReady) {
-      onFocusReady(focusIndia);
-    }
-  }, [onFocusReady]);
+  useImperativeHandle(ref, () => ({
+    focusIndia,
+  }), []);
 
   useEffect(() => {
     let phi = INDIA_PHI;
@@ -128,4 +122,8 @@ export default function Globe({
       </div>
     </div>
   );
-}
+});
+
+Globe.displayName = "Globe";
+
+export default Globe;

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { MapPin, Cake, Link2, Code2, Quote } from "lucide-react";
-import Globe from "@/components/Globe";
+import Globe, { type GlobeHandle } from "@/components/Globe";
 import {
   GithubIcon,
   InstagramIcon,
@@ -63,7 +63,7 @@ export default function About() {
     { name: "AI & ML", icon: <BrainCpuLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
   ];
 
-  const [focusIndiaFn, setFocusIndiaFn] = React.useState<(() => void) | null>(null);
+  const globeRef = React.useRef<GlobeHandle>(null);
 
   return (
     <section
@@ -87,22 +87,20 @@ export default function About() {
                 <MapPin className="w-4 h-4 text-red-500 animate-pulse" />
                 <h4 className="truncate font-medium text-white">Maharashtra, India</h4>
               </div>
-              {focusIndiaFn && (
-                <button
-                  type="button"
-                  onClick={() => focusIndiaFn()}
-                  className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white border border-zinc-700/60 transition-colors cursor-pointer select-none flex items-center gap-1"
-                  title="Center globe on Maharashtra, India"
-                >
-                  <span>Focus India</span>
-                  <span>📍</span>
-                </button>
-              )}
+              <button
+                type="button"
+                onClick={() => globeRef.current?.focusIndia()}
+                className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white border border-zinc-700/60 transition-colors cursor-pointer select-none flex items-center gap-1"
+                title="Center globe on Maharashtra, India"
+              >
+                <span>Focus India</span>
+                <span>📍</span>
+              </button>
             </div>
 
             {/* Rotating 3D Globe */}
             <div className="grow mt-2">
-              <Globe onFocusReady={(fn) => setFocusIndiaFn(() => fn)} />
+              <Globe ref={globeRef} />
             </div>
           </div>
 
