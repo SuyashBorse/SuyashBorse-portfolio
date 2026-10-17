@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Preloader from "@/components/Preloader";
 
 export const metadata: Metadata = {
   title: "Suyash Anil Borse | Developer Portfolio",
@@ -33,6 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body className="antialiased bg-[#0a0a0a] text-zinc-100 min-h-screen selection:bg-indigo-500/30 selection:text-cyan-300 relative overflow-x-hidden">
+        {/* Page Load / Buffering Preloader */}
+        <Preloader />
+
         {/* Accessibility: Skip to main content link */}
         <a
           href="#main-content"
