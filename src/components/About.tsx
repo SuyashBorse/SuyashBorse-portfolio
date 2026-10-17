@@ -1,121 +1,187 @@
 "use client";
 
 import React from "react";
-import { GraduationCap, Trophy, Cpu, Code2, CheckCircle2 } from "lucide-react";
+import { MapPin, Trophy, Share2, Code2, GraduationCap, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-import { CodeChefIcon, LeetCodeIcon } from "@/components/SocialIcons";
+import { GithubIcon, LinkedinIcon, CodeChefIcon, LeetCodeIcon } from "@/components/SocialIcons";
+import { socialLinksData } from "@/data/socialLinks";
+
+const row1Skills = [
+  "Java",
+  "JavaScript",
+  "TypeScript",
+  "SQL",
+  "React",
+  "Tailwind CSS",
+  "Next.js",
+];
+
+const row2Skills = [
+  "Node.js",
+  "Supabase",
+  "Firebase",
+  "MySQL",
+  "MongoDB",
+  "Git",
+  "GitHub",
+  "VS Code",
+  "Power BI",
+];
 
 export default function About() {
   return (
     <section
       id="about"
-      className="py-24 px-4 max-w-6xl mx-auto scroll-mt-20"
+      className="mt-20 sm:mt-32 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
       aria-label="About Suyash Anil Borse"
     >
-      <div className="flex flex-col items-center text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono text-indigo-400 bg-indigo-950/30 border border-indigo-800/40 mb-3">
-          <span>01. BACKGROUND</span>
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
-          About Me
-        </h2>
-        <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mb-6"></div>
-        <p className="text-zinc-400 max-w-2xl text-sm sm:text-base leading-relaxed">
-          Driven by a continuous pursuit of algorithmic efficiency, system design, and software craftsmanship.
+      <div className="mb-6 sm:mb-8">
+        <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white">
+          About me
+        </h3>
+        <p className="text-zinc-500 font-mono text-xs sm:text-sm mt-1">
+          Background, algorithmic focus &amp; technical proficiencies
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Card 1: Academic Background */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="p-6 sm:p-8 rounded-2xl bg-[#171717] border border-zinc-800 hover:border-indigo-500/50 transition-all duration-300 relative group overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl group-hover:bg-indigo-500/10 transition-colors pointer-events-none"></div>
-          
-          <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-105 transition-transform">
-            <GraduationCap className="w-6 h-6" />
+      {/* Bento Grid — Dino Kupinic Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Card 1: Location & College Background (Col-span-2) */}
+        <div className="md:col-span-2 rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs relative overflow-hidden group">
+          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
+            <MapPin className="w-4 h-4 text-cyan-400" />
+            <h4 className="font-semibold text-zinc-200">Maharashtra, India · Academic Base</h4>
           </div>
 
-          <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-            Engineering Education
-          </h3>
-          <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-            Currently a <strong className="text-zinc-200">2nd-year B.Tech Information Technology</strong> engineering student at{" "}
-            <strong className="text-indigo-400">R. C. Patel Institute of Technology</strong>.
-          </p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-3">
+            <div>
+              <p className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                R. C. Patel Institute of Technology
+              </p>
+              <p className="text-zinc-400 text-xs sm:text-sm font-mono mt-1">
+                2nd-year B.Tech Student in Information Technology Engineering
+              </p>
+            </div>
 
-          <div className="pt-4 border-t border-zinc-800/80 flex items-center gap-2 text-xs font-mono text-zinc-400">
-            <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400" />
-            <span>Information Technology Major</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-400">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span>21.35° N, 74.88° E</span>
+            </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Card 2: Algorithmic Problem Solving */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="p-6 sm:p-8 rounded-2xl bg-[#171717] border border-zinc-800 hover:border-cyan-500/50 transition-all duration-300 relative group overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors pointer-events-none"></div>
-
-          <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-105 transition-transform">
-            <Trophy className="w-6 h-6" />
+        {/* Card 2: Daily Algorithmic Practice & DSA */}
+        <div className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs flex flex-col justify-between">
+          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
+            <Trophy className="w-4 h-4 text-indigo-400" />
+            <h4 className="font-semibold text-zinc-200">Problem Solving</h4>
           </div>
 
-          <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-            Competitive Programming
-          </h3>
-          <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-            Engaged in <strong className="text-zinc-200">daily competitive-programming practice</strong> on{" "}
-            <strong className="text-cyan-400">CodeChef</strong> and{" "}
-            <strong className="text-cyan-400">LeetCode</strong> to hone problem-solving intuition and algorithmic speed.
-          </p>
+          <div className="my-2">
+            <div className="text-4xl sm:text-5xl font-black text-white tracking-tight font-mono">
+              DAILY
+            </div>
+            <p className="text-xs sm:text-sm text-zinc-400 mt-2 leading-relaxed">
+              Practicing on <strong className="text-zinc-200">CodeChef</strong> &amp;{" "}
+              <strong className="text-zinc-200">LeetCode</strong> with a deep focus on Data Structures &amp; Algorithms.
+            </p>
+          </div>
 
-          <div className="pt-4 border-t border-zinc-800/80 flex items-center gap-3 text-xs font-mono text-zinc-400">
-            <span className="flex items-center gap-1">
+          <div className="flex items-center gap-3 pt-4 border-t border-zinc-900 text-xs font-mono text-zinc-500">
+            <span className="flex items-center gap-1.5 text-zinc-400">
               <CodeChefIcon className="w-3.5 h-3.5 text-cyan-400" />
               <span>CodeChef</span>
             </span>
             <span>•</span>
-            <span className="flex items-center gap-1">
+            <span className="flex items-center gap-1.5 text-zinc-400">
               <LeetCodeIcon className="w-3.5 h-3.5 text-cyan-400" />
               <span>LeetCode</span>
             </span>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Card 3: DSA & Software Architecture */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="p-6 sm:p-8 rounded-2xl bg-[#171717] border border-zinc-800 hover:border-indigo-500/50 transition-all duration-300 relative group overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl group-hover:bg-indigo-500/10 transition-colors pointer-events-none"></div>
-
-          <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-105 transition-transform">
-            <Cpu className="w-6 h-6" />
+        {/* Card 3: Social Links List (Dino Style Stack) */}
+        <div className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs flex flex-col justify-between">
+          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-3">
+            <Share2 className="w-4 h-4 text-cyan-400" />
+            <h4 className="font-semibold text-zinc-200">Socials</h4>
           </div>
 
-          <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-            Data Structures &amp; Algorithms
-          </h3>
-          <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-            A deep passion for <strong className="text-zinc-200">Data Structures &amp; Algorithms</strong>, memory efficiency, and building structured, maintainable software architectures.
-          </p>
-
-          <div className="pt-4 border-t border-zinc-800/80 flex items-center gap-2 text-xs font-mono text-zinc-400">
-            <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400" />
-            <span>Core Foundation Focus</span>
+          <div className="flex flex-col gap-2.5 my-1">
+            {socialLinksData.map((social) => {
+              if (social.url) {
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between text-xs font-mono text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors py-1"
+                  >
+                    <span className="flex items-center gap-2">
+                      {social.iconName === "github" && <GithubIcon className="w-3.5 h-3.5" />}
+                      <span>{social.name}</span>
+                    </span>
+                    <ExternalLink className="w-3 h-3 text-zinc-500" />
+                  </a>
+                );
+              }
+              return (
+                <div
+                  key={social.name}
+                  className="flex items-center justify-between text-xs font-mono text-zinc-500 py-1"
+                >
+                  <span className="flex items-center gap-2">
+                    {social.iconName === "linkedin" && <LinkedinIcon className="w-3.5 h-3.5" />}
+                    {social.iconName === "codechef" && <CodeChefIcon className="w-3.5 h-3.5" />}
+                    {social.iconName === "leetcode" && <LeetCodeIcon className="w-3.5 h-3.5" />}
+                    <span>{social.name}</span>
+                  </span>
+                  <span className="text-[10px] text-zinc-600 bg-zinc-900 px-1 rounded">Soon</span>
+                </div>
+              );
+            })}
           </div>
-        </motion.div>
+
+          <div className="pt-3 border-t border-zinc-900 text-[11px] font-mono text-zinc-500">
+            Open for collaborations
+          </div>
+        </div>
+
+        {/* Card 4: Infinite Scrolling Skills Marquee (Col-span-2) */}
+        <div className="md:col-span-2 rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs overflow-hidden">
+          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
+            <Code2 className="w-4 h-4 text-indigo-400" />
+            <h4 className="font-semibold text-zinc-200">Tech Stack &amp; Tooling</h4>
+          </div>
+
+          {/* Marquee Rows with Edge Gradient Masks */}
+          <div className="mask-gradient-x overflow-hidden py-1 space-y-2.5">
+            {/* Row 1: Leftward Marquee */}
+            <div className="animate-marquee gap-2.5">
+              {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
+                <div
+                  key={`r1-${skill}-${index}`}
+                  className="px-3.5 py-1.5 rounded-md border border-zinc-800 bg-zinc-900/90 text-xs font-mono text-zinc-300 select-none hover:border-zinc-700 transition-colors"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+
+            {/* Row 2: Rightward Reverse Marquee */}
+            <div className="animate-marquee-reverse gap-2.5">
+              {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
+                <div
+                  key={`r2-${skill}-${index}`}
+                  className="px-3.5 py-1.5 rounded-md border border-zinc-800 bg-zinc-900/90 text-xs font-mono text-zinc-300 select-none hover:border-zinc-700 transition-colors"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

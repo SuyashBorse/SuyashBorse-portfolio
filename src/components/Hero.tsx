@@ -1,49 +1,47 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Code2, Sparkles, Terminal, Layers } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Terminal } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const fullText = "Java Developer | Web Engineer | Algorithmic Problem Solver";
+  const fullSubText = "Java Developer | Web Engineer | Algorithmic Problem Solver";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
-  // Typing effect that gracefully displays complete text if reduced-motion is preferred
   useEffect(() => {
-    // Check for reduced motion preference
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mediaQuery.matches) {
-      setDisplayedText(fullText);
+      setDisplayedText(fullSubText);
       return;
     }
 
-    if (index < fullText.length) {
+    if (index < fullSubText.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + fullText[index]);
+        setDisplayedText((prev) => prev + fullSubText[index]);
         setIndex((prev) => prev + 1);
-      }, 45);
+      }, 40);
       return () => clearTimeout(timeout);
     }
-  }, [index, fullText]);
+  }, [index, fullSubText]);
 
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex flex-col items-center justify-center text-center px-4 pt-24 pb-16 max-w-5xl mx-auto"
+      className="mt-12 sm:mt-24 md:mt-32 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto"
       aria-label="Introduction Hero"
     >
-      {/* Animated Circular Avatar / Profile Image Section */}
+      {/* Circular Avatar with Orbiting Dotted Ring */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
+        initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative mb-8 group flex items-center justify-center w-32 h-32 sm:w-36 sm:h-36"
+        transition={{ duration: 0.5 }}
+        className="relative mb-6 sm:mb-8 flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32"
       >
-        {/* Ambient background pulsing glow */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 blur-2xl opacity-40 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
+        {/* Ambient subtle background glow */}
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 blur-xl pointer-events-none"></div>
 
-        {/* Outer Smooth Rotating Dotted Ring (Small & Refined) */}
+        {/* Outer Fine Rotating Dotted Ring */}
         <motion.svg
           animate={{ rotate: 360 }}
           transition={{
@@ -61,7 +59,6 @@ export default function Hero() {
               <stop offset="100%" stopColor="#a855f7" />
             </linearGradient>
           </defs>
-          {/* Subtle faint track */}
           <circle
             cx="80"
             cy="80"
@@ -70,7 +67,6 @@ export default function Hero() {
             stroke="rgba(255, 255, 255, 0.05)"
             strokeWidth="0.75"
           />
-          {/* Luminous Small Rotating Dotted Ring */}
           <circle
             cx="80"
             cy="80"
@@ -84,144 +80,81 @@ export default function Hero() {
           />
         </motion.svg>
 
-        {/* Inner Circle Avatar Container (Stationary - stays upright) */}
-        <div className="relative w-[118px] h-[118px] sm:w-[134px] sm:h-[134px] rounded-full bg-[#111113] border border-white/10 flex items-center justify-center overflow-hidden shadow-inner z-10">
-          {/* 
-            PROFILE IMAGE PLACEHOLDER:
-            When you are ready to use your photo, replace the block below with:
-            <img src="/your-photo.jpg" alt="Suyash Borse" className="w-full h-full object-cover rounded-full" />
-          */}
+        {/* Inner Circle Avatar Container */}
+        <div className="relative w-[102px] h-[102px] sm:w-[116px] sm:h-[116px] rounded-full bg-[#111113] border border-zinc-800 flex items-center justify-center overflow-hidden shadow-inner z-10">
           <motion.div
-            animate={{
-              y: [0, -3, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+            animate={{ y: [0, -2, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="flex items-center justify-center w-full h-full select-none"
           >
-            <span className="text-4xl sm:text-5xl font-black bg-gradient-to-br from-indigo-300 via-cyan-400 to-white bg-clip-text text-transparent tracking-tighter drop-shadow-md">
+            <span className="text-3xl sm:text-4xl font-black bg-gradient-to-b from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent tracking-tighter">
               S
             </span>
           </motion.div>
-
-          {/* Subtle internal radial shine */}
-          <div className="absolute inset-0 bg-radial from-white/10 to-transparent pointer-events-none rounded-full"></div>
         </div>
 
-        {/* Active Status Badge Indicator (Stationary at bottom-right) */}
+        {/* Status Dot */}
         <div
-          className="absolute bottom-0.5 right-0.5 w-6 h-6 rounded-full bg-zinc-950 border-2 border-[#0a0a0a] flex items-center justify-center shadow-lg z-20"
+          className="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-zinc-950 border-2 border-[#09090b] flex items-center justify-center shadow-lg z-20"
           title="Available for opportunities"
-          aria-label="Status: Active"
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         </div>
       </motion.div>
 
-      {/* Main Headline */}
+      {/* Giant Editorial Heading (Dino Kupinic Style) */}
       <motion.h1
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]"
+        transition={{ duration: 0.6 }}
+        className="bg-gradient-to-t from-zinc-500 via-zinc-200 to-white bg-clip-text text-transparent text-6xl sm:text-8xl md:text-[120px] lg:text-[138px] font-medium tracking-[-0.075em] leading-[0.95] text-center antialiased"
       >
-        Hi, I&apos;m{" "}
-        <span className="bg-gradient-to-r from-indigo-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">
-          Suyash Anil Borse.
-        </span>
+        Suyash Borse
       </motion.h1>
 
-      {/* Accessible Animated Sub-headline */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
+      {/* Subtitle */}
+      <motion.h2
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="h-14 sm:h-10 flex items-center justify-center mb-8"
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="bg-gradient-to-t from-zinc-500 to-white bg-clip-text text-transparent text-lg sm:text-2xl md:text-3xl font-bold tracking-wider uppercase text-center mt-4 sm:mt-5"
       >
-        {/* Screen reader only full text for assistive accessibility */}
-        <span className="sr-only">{fullText}</span>
+        JAVA DEVELOPER · WEB ENGINEER
+      </motion.h2>
 
-        {/* Visual typing representation */}
-        <p
-          aria-hidden="true"
-          className="text-base sm:text-xl font-mono text-zinc-300 tracking-wide flex items-center justify-center flex-wrap"
-        >
-          <span>{displayedText}</span>
-          <span className="inline-block w-2 h-5 bg-cyan-400 ml-1 animate-pulse"></span>
-        </p>
-      </motion.div>
-
-      {/* Supporting context snippet */}
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="text-zinc-400 text-sm sm:text-base max-w-2xl mb-10 leading-relaxed font-normal"
-      >
-        Engineering modern web applications and mastering Data Structures &amp; Algorithms through daily problem-solving on CodeChef and LeetCode.
-      </motion.p>
-
-      {/* CTAs */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
-      >
-        <a
-          href="#projects"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 shadow-glow-indigo/50 hover:shadow-glow-cyan/50 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
-        >
-          <span>View Projects</span>
-          <ArrowRight className="w-4 h-4" />
-        </a>
-        <a
-          href="#contact"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-medium text-zinc-300 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
-        >
-          <span>Contact Me</span>
-        </a>
-      </motion.div>
-
-      {/* Quick stats / Highlights bar */}
+      {/* Animated Typing Line */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="mt-16 pt-8 border-t border-zinc-900/80 grid grid-cols-2 sm:grid-cols-3 gap-6 text-left max-w-2xl w-full"
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="mt-4 font-mono text-xs sm:text-sm text-zinc-400 max-w-xl flex items-center justify-center"
       >
-        <div className="flex items-start gap-3">
-          <div className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-indigo-400">
-            <Code2 className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="text-xs font-mono text-zinc-500 uppercase">Focus</div>
-            <div className="text-sm font-semibold text-zinc-200">DSA &amp; Systems</div>
-          </div>
-        </div>
+        <span className="sr-only">{fullSubText}</span>
+        <span aria-hidden="true" className="flex items-center">
+          <span>{displayedText}</span>
+          <span className="inline-block w-1.5 h-4 bg-zinc-400 ml-1 animate-pulse"></span>
+        </span>
+      </motion.div>
 
-        <div className="flex items-start gap-3">
-          <div className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-cyan-400">
-            <Terminal className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="text-xs font-mono text-zinc-500 uppercase">Practice</div>
-            <div className="text-sm font-semibold text-zinc-200">CodeChef &amp; LeetCode</div>
-          </div>
-        </div>
-
-        <div className="col-span-2 sm:col-span-1 flex items-start gap-3">
-          <div className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-indigo-400">
-            <Layers className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="text-xs font-mono text-zinc-500 uppercase">Specialization</div>
-            <div className="text-sm font-semibold text-zinc-200">Full-Stack &amp; DSA</div>
-          </div>
-        </div>
+      {/* CTA Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="flex flex-row items-center justify-center gap-3 mt-8 sm:mt-10"
+      >
+        <a
+          href="#projects"
+          className="inline-flex items-center justify-center whitespace-nowrap text-xs font-mono uppercase tracking-wider font-semibold rounded-md bg-white text-zinc-950 hover:bg-zinc-200 transition-colors h-9 px-5 shadow-sm"
+        >
+          <span>All Projects</span>
+        </a>
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center whitespace-nowrap text-xs font-mono uppercase tracking-wider rounded-md border border-zinc-800 bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors h-9 px-5"
+        >
+          <span>Contact Me</span>
+        </a>
       </motion.div>
     </section>
   );
