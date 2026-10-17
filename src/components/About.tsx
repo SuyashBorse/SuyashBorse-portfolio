@@ -63,6 +63,8 @@ export default function About() {
     { name: "AI & ML", icon: <BrainCpuLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
   ];
 
+  const [focusIndiaFn, setFocusIndiaFn] = React.useState<(() => void) | null>(null);
+
   return (
     <section
       id="about"
@@ -80,14 +82,27 @@ export default function About() {
         <div className="flex flex-col gap-5 w-full md:w-1/2">
           {/* 1. Location Card with Rotating 3D Globe & Red Dot on Maharashtra */}
           <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-3 sm:p-4 drop-shadow-sm flex flex-col justify-between overflow-hidden hover:border-zinc-700 transition-colors">
-            <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300">
-              <MapPin className="w-4 h-4 text-zinc-400" />
-              <h4 className="truncate font-medium text-white">Maharashtra, India</h4>
+            <div className="flex items-center justify-between text-sm font-medium text-zinc-300">
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-red-500 animate-pulse" />
+                <h4 className="truncate font-medium text-white">Maharashtra, India</h4>
+              </div>
+              {focusIndiaFn && (
+                <button
+                  type="button"
+                  onClick={() => focusIndiaFn()}
+                  className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white border border-zinc-700/60 transition-colors cursor-pointer select-none flex items-center gap-1"
+                  title="Center globe on Maharashtra, India"
+                >
+                  <span>Focus India</span>
+                  <span>📍</span>
+                </button>
+              )}
             </div>
 
             {/* Rotating 3D Globe */}
             <div className="grow mt-2">
-              <Globe />
+              <Globe onFocusReady={(fn) => setFocusIndiaFn(() => fn)} />
             </div>
           </div>
 
