@@ -1,137 +1,123 @@
 "use client";
 
 import React from "react";
-import { ExternalLink, Layers, FolderGit2, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { projectsData, Project } from "@/data/projects";
-import { GithubIcon } from "@/components/SocialIcons";
+import { projectsData } from "@/data/projects";
+import {
+  ReactLogo,
+  TypeScriptLogo,
+  NextLogo,
+  PythonLogo,
+  TailwindLogo,
+  DatabaseLogo,
+  BrainCpuLogo,
+} from "@/components/TechLogos";
 
 export default function Projects() {
-  // Map project tech icons for the visual banner
-  const getBannerIcons = (project: Project) => {
-    switch (project.id) {
+  const getProjectConfig = (id: string) => {
+    switch (id) {
       case "ecopilot-ai":
-        return ["Next.js", "TypeScript", "Tailwind"];
+        return {
+          icons: (
+            <>
+              <PythonLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+              <TypeScriptLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+              <ReactLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+            </>
+          ),
+          dateText: "September 2026",
+          badgeStyle: "bg-[#331407] border border-[#7c2d12]/60 text-[#ea580c] dark:text-[#fb923c]",
+        };
       case "kanflow":
-        return ["React", "TypeScript", "Tailwind"];
+        return {
+          icons: (
+            <>
+              <NextLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+              <TailwindLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+              <DatabaseLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+            </>
+          ),
+          dateText: "October 2025",
+          badgeStyle: "bg-[#331407] border border-[#7c2d12]/60 text-[#ea580c] dark:text-[#fb923c]",
+        };
       case "sih-2026":
-        return ["Architecture", "Python", "Deep Learning"];
       default:
-        return project.techStack;
+        return {
+          icons: (
+            <>
+              <NextLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+              <BrainCpuLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+              <DatabaseLogo className="w-8 h-8 sm:w-9 sm:h-9 text-zinc-100" />
+            </>
+          ),
+          dateText: "May 2025",
+          badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
+        };
     }
-  };
-
-  const getStatusBadge = (project: Project) => {
-    if (project.isBlueprint) {
-      return { text: "Architecture Blueprint", color: "bg-amber-950/50 text-amber-300 border-amber-800/60" };
-    }
-    return { text: "Active Project", color: "bg-zinc-800/80 text-zinc-300 border-zinc-700/60" };
   };
 
   return (
     <section
       id="projects"
-      className="mt-20 sm:mt-32 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
+      className="mt-16 sm:mt-28 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
       aria-label="Projects Showcase"
     >
-      <div className="flex items-center justify-between mb-6 sm:mb-8">
-        <div>
-          <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white">
-            Projects
-          </h3>
-          <p className="text-zinc-500 font-mono text-xs sm:text-sm mt-1">
-            Featured applications &amp; system architecture blueprints
-          </p>
-        </div>
-      </div>
+      {/* Section Title */}
+      <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white mb-5 sm:mb-6">
+        Projects
+      </h3>
 
-      {/* Grid of Dino Kupinic Styled Project Cards */}
+      {/* Grid of Dino Kupinic Exact Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {projectsData.map((project: Project, idx: number) => {
-          const badge = getStatusBadge(project);
+        {projectsData.map((project, idx) => {
+          const config = getProjectConfig(project.id);
+
           return (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="glass-card flex flex-col rounded-xl overflow-hidden group shadow-lg"
+              transition={{ duration: 0.35, delay: idx * 0.08 }}
+              className="flex flex-col border border-zinc-800 bg-[#09090b] rounded-sm overflow-hidden hover:border-zinc-700 transition-colors shadow-sm group"
             >
-              {/* Visual Banner Container */}
-              <div className="relative flex h-36 sm:h-44 w-full items-center justify-center bg-gradient-to-t from-zinc-950/70 to-zinc-900/30 backdrop-blur-md border-b border-white/[0.08] overflow-hidden group-hover:from-zinc-900/60 transition-colors">
-                {/* Tech Badges Centered in Banner */}
-                <div className="flex items-center justify-center gap-2 px-3">
-                  {getBannerIcons(project).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2.5 py-1 rounded-md bg-white/[0.04] backdrop-blur-md border border-white/10 text-xs font-mono font-medium text-zinc-200 shadow-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              {/* Upper Visual Container */}
+              <div className="relative flex h-56 sm:h-64 w-full items-center justify-center bg-gradient-to-t from-[#09090b] via-zinc-900 to-zinc-800/80 border-b border-zinc-800 overflow-hidden">
+                {/* Big White Centered Tech Logos */}
+                <div className="flex items-center justify-center gap-3.5 select-none transition-transform duration-200 motion-safe:group-hover:scale-105">
+                  {config.icons}
                 </div>
 
-                {/* Status / Date Pill at Bottom-Right */}
-                <div className={`absolute right-2.5 bottom-2.5 rounded-md backdrop-blur-md border px-2 py-0.5 text-[11px] font-mono ${badge.color}`}>
-                  {badge.text}
+                {/* Date / Status Pill at Bottom Right */}
+                <div className={`absolute right-2.5 bottom-2.5 rounded px-2 py-0.5 text-xs font-mono font-normal ${config.badgeStyle}`}>
+                  {config.dateText}
                 </div>
               </div>
 
-              {/* Content Body */}
-              <div className="p-4 flex-1 flex flex-col justify-between">
+              {/* Lower Content */}
+              <div className="p-3.5 sm:p-4 flex flex-col justify-between flex-1">
                 <div>
-                  <h4 className="text-base sm:text-lg font-semibold text-white tracking-tight group-hover:text-cyan-300 transition-colors">
+                  <h4 className="text-base font-semibold text-white tracking-tight truncate group-hover:text-zinc-200 transition-colors">
                     {project.title}
                   </h4>
-                  <p className="text-zinc-400 text-xs sm:text-sm line-clamp-2 mt-1.5 leading-relaxed">
+                  <p className="text-zinc-400 text-xs sm:text-sm line-clamp-2 mt-1 leading-relaxed">
                     {project.description}
                   </p>
-                </div>
-
-                {/* Footer Link Affordances */}
-                <div className="flex items-center gap-2 pt-4 mt-3 border-t border-zinc-900 text-xs font-mono">
-                  {project.githubUrl ? (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"
-                      aria-label={`View ${project.title} on GitHub`}
-                    >
-                      <GithubIcon className="w-3.5 h-3.5" />
-                      <span>Code</span>
-                    </a>
-                  ) : (
-                    <span className="inline-flex items-center gap-1 text-zinc-600 select-none cursor-not-allowed">
-                      <GithubIcon className="w-3.5 h-3.5 opacity-50" />
-                      <span>Code Pending</span>
-                    </span>
-                  )}
-
-                  <span className="text-zinc-700">•</span>
-
-                  {project.liveDemoUrl ? (
-                    <a
-                      href={project.liveDemoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-zinc-300 hover:text-white transition-colors"
-                      aria-label={`Open demo for ${project.title}`}
-                    >
-                      <span>Live Demo</span>
-                      <ArrowUpRight className="w-3 h-3" />
-                    </a>
-                  ) : (
-                    <span className="text-zinc-600 select-none cursor-not-allowed">
-                      {project.isBlueprint ? "Blueprint Only" : "Demo Pending"}
-                    </span>
-                  )}
                 </div>
               </div>
             </motion.div>
           );
         })}
+      </div>
+
+      {/* All Projects Button */}
+      <div className="mt-6">
+        <a
+          href="#projects"
+          className="inline-flex items-center justify-center rounded-sm bg-white text-zinc-950 font-medium text-xs sm:text-sm px-4 py-2 hover:bg-zinc-200 transition-colors shadow-xs"
+        >
+          All Projects
+        </a>
       </div>
     </section>
   );
