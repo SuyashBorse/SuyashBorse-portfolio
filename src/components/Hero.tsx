@@ -43,15 +43,15 @@ export default function Hero() {
         {/* Ambient background pulsing glow */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 blur-2xl opacity-40 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
 
-        {/* Outer Smooth Rotating Dotted Ring */}
+        {/* Outer Smooth Rotating Dotted Ring (Small & Refined) */}
         <motion.svg
           animate={{ rotate: 360 }}
           transition={{
-            duration: 16,
+            duration: 18,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute -inset-1.5 w-[calc(100%+12px)] h-[calc(100%+12px)] pointer-events-none"
+          className="absolute -inset-1 w-[calc(100%+8px)] h-[calc(100%+8px)] pointer-events-none"
           viewBox="0 0 160 160"
         >
           <defs>
@@ -65,22 +65,22 @@ export default function Hero() {
           <circle
             cx="80"
             cy="80"
-            r="74"
+            r="75"
             fill="none"
-            stroke="rgba(255, 255, 255, 0.08)"
-            strokeWidth="1.5"
+            stroke="rgba(255, 255, 255, 0.05)"
+            strokeWidth="0.75"
           />
-          {/* Luminous Rotating Dotted Ring */}
+          {/* Luminous Small Rotating Dotted Ring */}
           <circle
             cx="80"
             cy="80"
-            r="74"
+            r="75"
             fill="none"
             stroke="url(#dottedRingGradient)"
-            strokeWidth="3.5"
-            strokeDasharray="1 11"
+            strokeWidth="1.75"
+            strokeDasharray="1 6"
             strokeLinecap="round"
-            className="filter drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]"
+            className="filter drop-shadow-[0_0_3px_rgba(6,182,212,0.5)]"
           />
         </motion.svg>
 
