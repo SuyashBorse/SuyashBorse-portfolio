@@ -59,7 +59,7 @@ export default function Globe({
         markers: [
           {
             location: [MAHARASHTRA_LAT, MAHARASHTRA_LON],
-            size: 0.09,
+            size: 0.04,
             color: [1, 0.15, 0.15],
           },
         ],
