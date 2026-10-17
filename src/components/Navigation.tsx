@@ -46,7 +46,7 @@ export default function Navigation() {
       <div
         className={`flex h-16 w-full justify-center px-4 transition-all duration-300 ${
           scrolled
-            ? "bg-[#09090b]/80 backdrop-blur-[20px] border-b border-zinc-800/70 shadow-sm"
+            ? "bg-[#09090b]/65 backdrop-blur-2xl border-b border-white/[0.08] shadow-lg shadow-black/30"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -58,7 +58,7 @@ export default function Navigation() {
               className="flex items-center gap-2.5 text-zinc-100 hover:text-white transition-transform duration-150 motion-safe:hover:scale-105 group"
               aria-label="Suyash Borse home"
             >
-              <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-700/80 flex items-center justify-center text-zinc-200 group-hover:border-cyan-400/60 transition-colors shadow-xs">
+              <div className="w-8 h-8 rounded-lg bg-white/[0.04] backdrop-blur-md border border-white/10 flex items-center justify-center text-zinc-200 group-hover:border-cyan-400/60 transition-colors shadow-xs">
                 <span className="font-mono font-bold text-xs tracking-tight bg-gradient-to-tr from-indigo-400 to-cyan-300 bg-clip-text text-transparent">
                   SB
                 </span>
@@ -69,9 +69,9 @@ export default function Navigation() {
             </a>
           </div>
 
-          {/* Center: Desktop Navigation with Dotted Underline on Hover (Dino Style) */}
+          {/* Center: Desktop Navigation with Frosted Capsule and Dotted Underline on Hover */}
           <nav aria-label="Main navigation" className="hidden md:flex shrink-0 justify-center">
-            <ul className="flex items-center gap-1 sm:gap-2">
+            <ul className="flex items-center gap-1 sm:gap-1.5 bg-zinc-900/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/[0.07] shadow-inner">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a

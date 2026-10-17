@@ -62,29 +62,29 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: idx * 0.08 }}
-            className="rounded-xl border border-zinc-800 bg-zinc-950/60 p-4 hover:border-zinc-700 transition-colors flex flex-col justify-between"
+            className="glass-card rounded-xl p-4 flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <div className="p-1.5 rounded-md bg-zinc-900 border border-zinc-800">
+                <div className="p-1.5 rounded-md bg-white/[0.04] backdrop-blur-md border border-white/10">
                   {cat.icon}
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-white tracking-tight">
                     {cat.title}
                   </h4>
-                  <span className="text-[10px] font-mono text-zinc-500 uppercase block">
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase block">
                     {cat.category}
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-900 mt-2">
+            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06] mt-2">
               {cat.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-900 text-zinc-300 border border-zinc-800/80"
+                  className="px-2 py-0.5 rounded text-[11px] font-mono bg-white/[0.04] backdrop-blur-md text-zinc-200 border border-white/[0.08]"
                 >
                   {skill}
                 </span>

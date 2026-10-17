@@ -45,9 +45,13 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        {/* Ambient subtle background glow */}
+        {/* Ambient atmospheric background glows for glass refraction */}
         <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden" aria-hidden="true">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-b from-zinc-800/20 via-zinc-900/10 to-transparent rounded-full blur-[100px]"></div>
+          <div className="absolute -top-32 -left-32 w-[550px] h-[550px] bg-indigo-600/15 rounded-full blur-[140px]"></div>
+          <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] bg-cyan-600/15 rounded-full blur-[140px]"></div>
+          <div className="absolute -bottom-32 left-1/4 w-[600px] h-[600px] bg-indigo-800/15 rounded-full blur-[160px]"></div>
+          {/* Subtle tech grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,#000_70%,transparent_100%)]"></div>
         </div>
 
         {/* Global Navigation */}

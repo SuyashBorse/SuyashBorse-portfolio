@@ -26,7 +26,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-zinc-800/80 bg-[#09090b] text-zinc-400 py-10 relative z-10 w-full" aria-label="Site footer">
+    <footer className="border-t border-white/[0.08] bg-[#09090b]/75 backdrop-blur-xl text-zinc-400 py-10 relative z-10 w-full" aria-label="Site footer">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 border-b border-zinc-900">
           {/* Brand info */}

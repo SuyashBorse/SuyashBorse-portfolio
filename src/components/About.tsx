@@ -44,10 +44,10 @@ export default function About() {
         </p>
       </div>
 
-      {/* Bento Grid — Dino Kupinic Layout */}
+      {/* Bento Grid — Dino Kupinic Layout with Glassmorphism */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Card 1: Location & College Background (Col-span-2) */}
-        <div className="md:col-span-2 rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs relative overflow-hidden group">
+        <div className="md:col-span-2 glass-card rounded-xl p-5 relative overflow-hidden group">
           <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
             <MapPin className="w-4 h-4 text-cyan-400" />
             <h4 className="font-semibold text-zinc-200">Maharashtra, India · Academic Base</h4>
@@ -63,7 +63,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-400">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-300">
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
               <span>21.35° N, 74.88° E</span>
             </div>
@@ -71,7 +71,7 @@ export default function About() {
         </div>
 
         {/* Card 2: Daily Algorithmic Practice & DSA */}
-        <div className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs flex flex-col justify-between">
+        <div className="glass-card rounded-xl p-5 flex flex-col justify-between">
           <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
             <Trophy className="w-4 h-4 text-indigo-400" />
             <h4 className="font-semibold text-zinc-200">Problem Solving</h4>
@@ -87,7 +87,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 pt-4 border-t border-zinc-900 text-xs font-mono text-zinc-500">
+          <div className="flex items-center gap-3 pt-4 border-t border-white/[0.06] text-xs font-mono text-zinc-500">
             <span className="flex items-center gap-1.5 text-zinc-400">
               <CodeChefIcon className="w-3.5 h-3.5 text-cyan-400" />
               <span>CodeChef</span>
@@ -101,7 +101,7 @@ export default function About() {
         </div>
 
         {/* Card 3: Social Links List (Dino Style Stack) */}
-        <div className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs flex flex-col justify-between">
+        <div className="glass-card rounded-xl p-5 flex flex-col justify-between">
           <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-3">
             <Share2 className="w-4 h-4 text-cyan-400" />
             <h4 className="font-semibold text-zinc-200">Socials</h4>
@@ -137,19 +137,19 @@ export default function About() {
                     {social.iconName === "leetcode" && <LeetCodeIcon className="w-3.5 h-3.5" />}
                     <span>{social.name}</span>
                   </span>
-                  <span className="text-[10px] text-zinc-600 bg-zinc-900 px-1 rounded">Soon</span>
+                  <span className="text-[10px] text-zinc-600 bg-zinc-900/60 px-1 rounded">Soon</span>
                 </div>
               );
             })}
           </div>
 
-          <div className="pt-3 border-t border-zinc-900 text-[11px] font-mono text-zinc-500">
+          <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-zinc-500">
             Open for collaborations
           </div>
         </div>
 
         {/* Card 4: Infinite Scrolling Skills Marquee (Col-span-2) */}
-        <div className="md:col-span-2 rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 shadow-xs overflow-hidden">
+        <div className="md:col-span-2 glass-card rounded-xl p-5 overflow-hidden">
           <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
             <Code2 className="w-4 h-4 text-indigo-400" />
             <h4 className="font-semibold text-zinc-200">Tech Stack &amp; Tooling</h4>
@@ -162,7 +162,7 @@ export default function About() {
               {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
                 <div
                   key={`r1-${skill}-${index}`}
-                  className="px-3.5 py-1.5 rounded-md border border-zinc-800 bg-zinc-900/90 text-xs font-mono text-zinc-300 select-none hover:border-zinc-700 transition-colors"
+                  className="px-3.5 py-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] backdrop-blur-md text-xs font-mono text-zinc-200 select-none hover:border-white/20 transition-colors"
                 >
                   {skill}
                 </div>
@@ -174,7 +174,7 @@ export default function About() {
               {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
                 <div
                   key={`r2-${skill}-${index}`}
-                  className="px-3.5 py-1.5 rounded-md border border-zinc-800 bg-zinc-900/90 text-xs font-mono text-zinc-300 select-none hover:border-zinc-700 transition-colors"
+                  className="px-3.5 py-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] backdrop-blur-md text-xs font-mono text-zinc-200 select-none hover:border-white/20 transition-colors"
                 >
                   {skill}
                 </div>

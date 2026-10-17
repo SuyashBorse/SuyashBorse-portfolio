@@ -56,16 +56,16 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="flex flex-col rounded-lg border border-zinc-800 bg-zinc-950/60 hover:border-zinc-700 transition-all duration-200 shadow-sm overflow-hidden group"
+              className="glass-card flex flex-col rounded-xl overflow-hidden group shadow-lg"
             >
               {/* Visual Banner Container */}
-              <div className="relative flex h-36 sm:h-44 w-full items-center justify-center bg-gradient-to-t from-zinc-900 to-zinc-950 border-b border-zinc-800/80 overflow-hidden group-hover:from-zinc-900/80 transition-colors">
+              <div className="relative flex h-36 sm:h-44 w-full items-center justify-center bg-gradient-to-t from-zinc-950/70 to-zinc-900/30 backdrop-blur-md border-b border-white/[0.08] overflow-hidden group-hover:from-zinc-900/60 transition-colors">
                 {/* Tech Badges Centered in Banner */}
                 <div className="flex items-center justify-center gap-2 px-3">
                   {getBannerIcons(project).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 rounded bg-zinc-900/90 border border-zinc-800 text-xs font-mono font-medium text-zinc-300 shadow-xs"
+                      className="px-2.5 py-1 rounded-md bg-white/[0.04] backdrop-blur-md border border-white/10 text-xs font-mono font-medium text-zinc-200 shadow-sm"
                     >
                       {tech}
                     </span>
@@ -73,7 +73,7 @@ export default function Projects() {
                 </div>
 
                 {/* Status / Date Pill at Bottom-Right */}
-                <div className={`absolute right-2.5 bottom-2.5 rounded border px-2 py-0.5 text-[11px] font-mono ${badge.color}`}>
+                <div className={`absolute right-2.5 bottom-2.5 rounded-md backdrop-blur-md border px-2 py-0.5 text-[11px] font-mono ${badge.color}`}>
                   {badge.text}
                 </div>
               </div>

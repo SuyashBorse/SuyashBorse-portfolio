@@ -111,7 +111,7 @@ export default function ContactForm() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-5 sm:p-8 shadow-xs"
+        className="glass-card rounded-xl p-5 sm:p-8 shadow-xl"
       >
         {/* Screen reader live status */}
         <div role="status" aria-live="polite" className="sr-only">
