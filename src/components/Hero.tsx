@@ -43,19 +43,46 @@ export default function Hero() {
         {/* Ambient background pulsing glow */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 blur-2xl opacity-40 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
 
-        {/* Outer Smooth Rotating Conic-Gradient Ring */}
-        <motion.div
+        {/* Outer Smooth Rotating Dotted Ring */}
+        <motion.svg
           animate={{ rotate: 360 }}
           transition={{
-            duration: 4,
+            duration: 16,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute inset-0 rounded-full p-[3px] bg-[conic-gradient(from_0deg,#6366f1,#06b6d4,#a855f7,#06b6d4,#6366f1)] shadow-glow-cyan/50"
+          className="absolute -inset-1.5 w-[calc(100%+12px)] h-[calc(100%+12px)] pointer-events-none"
+          viewBox="0 0 160 160"
         >
-          {/* Inner masking layer for clean border thickness */}
-          <div className="w-full h-full rounded-full bg-[#0a0a0a]"></div>
-        </motion.div>
+          <defs>
+            <linearGradient id="dottedRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#6366f1" />
+              <stop offset="50%" stopColor="#06b6d4" />
+              <stop offset="100%" stopColor="#a855f7" />
+            </linearGradient>
+          </defs>
+          {/* Subtle faint track */}
+          <circle
+            cx="80"
+            cy="80"
+            r="74"
+            fill="none"
+            stroke="rgba(255, 255, 255, 0.08)"
+            strokeWidth="1.5"
+          />
+          {/* Luminous Rotating Dotted Ring */}
+          <circle
+            cx="80"
+            cy="80"
+            r="74"
+            fill="none"
+            stroke="url(#dottedRingGradient)"
+            strokeWidth="3.5"
+            strokeDasharray="1 11"
+            strokeLinecap="round"
+            className="filter drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]"
+          />
+        </motion.svg>
 
         {/* Inner Circle Avatar Container (Stationary - stays upright) */}
         <div className="relative w-[118px] h-[118px] sm:w-[134px] sm:h-[134px] rounded-full bg-[#111113] border border-white/10 flex items-center justify-center overflow-hidden shadow-inner z-10">
