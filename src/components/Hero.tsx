@@ -38,48 +38,59 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative mb-8 group"
+        className="relative mb-8 group flex items-center justify-center w-32 h-32 sm:w-36 sm:h-36"
       >
-        {/* Ambient background glow */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 blur-xl opacity-40 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
+        {/* Ambient background pulsing glow */}
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 blur-2xl opacity-40 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
 
-        {/* Outer Rotating Gradient Border Ring */}
-        <div className="relative p-1 rounded-full bg-gradient-to-tr from-indigo-500 via-cyan-400 to-indigo-500 shadow-glow-cyan/30">
-          {/* Inner Circle Avatar Container */}
-          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#111113] border border-white/10 flex items-center justify-center overflow-hidden relative shadow-inner">
-            {/* 
-              PROFILE IMAGE PLACEHOLDER:
-              When you are ready to use your photo, replace the block below with:
-              <img src="/your-photo.jpg" alt="Suyash Borse" className="w-full h-full object-cover rounded-full" />
-            */}
-            <motion.div
-              animate={{
-                y: [0, -3, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="flex items-center justify-center w-full h-full select-none"
-            >
-              <span className="text-4xl sm:text-5xl font-black bg-gradient-to-br from-indigo-300 via-cyan-400 to-white bg-clip-text text-transparent tracking-tighter drop-shadow-md">
-                S
-              </span>
-            </motion.div>
+        {/* Outer Smooth Rotating Conic-Gradient Ring */}
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="absolute inset-0 rounded-full p-[3px] bg-[conic-gradient(from_0deg,#6366f1,#06b6d4,#a855f7,#06b6d4,#6366f1)] shadow-glow-cyan/50"
+        >
+          {/* Inner masking layer for clean border thickness */}
+          <div className="w-full h-full rounded-full bg-[#0a0a0a]"></div>
+        </motion.div>
 
-            {/* Subtle internal radial shine */}
-            <div className="absolute inset-0 bg-radial from-white/10 to-transparent pointer-events-none rounded-full"></div>
-          </div>
-
-          {/* Active Status Badge Indicator */}
-          <div
-            className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-zinc-900 border-2 border-[#0a0a0a] flex items-center justify-center"
-            title="Available for opportunities"
-            aria-label="Status: Active"
+        {/* Inner Circle Avatar Container (Stationary - stays upright) */}
+        <div className="relative w-[118px] h-[118px] sm:w-[134px] sm:h-[134px] rounded-full bg-[#111113] border border-white/10 flex items-center justify-center overflow-hidden shadow-inner z-10">
+          {/* 
+            PROFILE IMAGE PLACEHOLDER:
+            When you are ready to use your photo, replace the block below with:
+            <img src="/your-photo.jpg" alt="Suyash Borse" className="w-full h-full object-cover rounded-full" />
+          */}
+          <motion.div
+            animate={{
+              y: [0, -3, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="flex items-center justify-center w-full h-full select-none"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          </div>
+            <span className="text-4xl sm:text-5xl font-black bg-gradient-to-br from-indigo-300 via-cyan-400 to-white bg-clip-text text-transparent tracking-tighter drop-shadow-md">
+              S
+            </span>
+          </motion.div>
+
+          {/* Subtle internal radial shine */}
+          <div className="absolute inset-0 bg-radial from-white/10 to-transparent pointer-events-none rounded-full"></div>
+        </div>
+
+        {/* Active Status Badge Indicator (Stationary at bottom-right) */}
+        <div
+          className="absolute bottom-0.5 right-0.5 w-6 h-6 rounded-full bg-zinc-950 border-2 border-[#0a0a0a] flex items-center justify-center shadow-lg z-20"
+          title="Available for opportunities"
+          aria-label="Status: Active"
+        >
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
         </div>
       </motion.div>
 
