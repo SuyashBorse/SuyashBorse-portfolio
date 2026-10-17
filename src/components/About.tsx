@@ -1,184 +1,235 @@
 "use client";
 
 import React from "react";
-import { MapPin, Trophy, Share2, Code2, GraduationCap, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
-import { GithubIcon, LinkedinIcon, CodeChefIcon, LeetCodeIcon } from "@/components/SocialIcons";
-import { socialLinksData } from "@/data/socialLinks";
-
-const row1Skills = [
-  "Java",
-  "JavaScript",
-  "TypeScript",
-  "SQL",
-  "React",
-  "Tailwind CSS",
-  "Next.js",
-];
-
-const row2Skills = [
-  "Node.js",
-  "Supabase",
-  "Firebase",
-  "MySQL",
-  "MongoDB",
-  "Git",
-  "GitHub",
-  "VS Code",
-  "Power BI",
-];
+import { MapPin, Cake, Link2, Code2, Quote } from "lucide-react";
+import Globe from "@/components/Globe";
+import {
+  GithubIcon,
+  InstagramIcon,
+  YouTubeIcon,
+  XTwitterIcon,
+} from "@/components/SocialIcons";
+import {
+  HtmlLogo,
+  CssLogo,
+  TsLogo,
+  JsLogo,
+  CppLogo,
+  JavaLogo,
+  PhpLogo,
+  PythonSkillLogo,
+  DockerLogo,
+  GitLogo,
+  FigmaLogo,
+  AwsLogo,
+  CloudflareLogo,
+  TerminalBashLogo,
+  MarkdownLogo,
+  SwiftLogo,
+} from "@/components/SkillMarqueeIcons";
+import {
+  ReactLogo,
+  NextLogo,
+  TailwindLogo,
+  DatabaseLogo,
+  BrainCpuLogo,
+} from "@/components/TechLogos";
 
 export default function About() {
+  const row1Skills = [
+    { name: "HTML5", icon: <HtmlLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "CSS3", icon: <CssLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "TypeScript", icon: <TsLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "JavaScript", icon: <JsLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "C++", icon: <CppLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Java", icon: <JavaLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "PHP", icon: <PhpLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Python", icon: <PythonSkillLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Swift", icon: <SwiftLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Bash", icon: <TerminalBashLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Markdown", icon: <MarkdownLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+  ];
+
+  const row2Skills = [
+    { name: "React", icon: <ReactLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Next.js", icon: <NextLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Tailwind CSS", icon: <TailwindLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Docker", icon: <DockerLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Git", icon: <GitLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Figma", icon: <FigmaLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "AWS", icon: <AwsLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Cloudflare", icon: <CloudflareLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Database", icon: <DatabaseLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "AI & ML", icon: <BrainCpuLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+  ];
+
   return (
     <section
       id="about"
-      className="mt-20 sm:mt-32 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
+      className="mt-16 sm:mt-28 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
       aria-label="About Suyash Anil Borse"
     >
-      <div className="mb-6 sm:mb-8">
-        <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white">
-          About me
-        </h3>
-        <p className="text-zinc-500 font-mono text-xs sm:text-sm mt-1">
-          Background, algorithmic focus &amp; technical proficiencies
-        </p>
-      </div>
+      {/* Section Header */}
+      <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white mb-5 sm:mb-6">
+        About me
+      </h3>
 
-      {/* Bento Grid — Dino Kupinic Layout with Glassmorphism */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Card 1: Location & College Background (Col-span-2) */}
-        <div className="md:col-span-2 glass-card rounded-xl p-5 relative overflow-hidden group">
-          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
-            <MapPin className="w-4 h-4 text-cyan-400" />
-            <h4 className="font-semibold text-zinc-200">Maharashtra, India · Academic Base</h4>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-3">
-            <div>
-              <p className="text-lg sm:text-xl font-bold text-white tracking-tight">
-                R. C. Patel Institute of Technology
-              </p>
-              <p className="text-zinc-400 text-xs sm:text-sm font-mono mt-1">
-                2nd-year B.Tech Student in Information Technology Engineering
-              </p>
+      {/* Main 2-Column Bento Container matching Dino Kupinic reference */}
+      <div className="flex flex-col md:flex-row gap-5 items-stretch w-full">
+        {/* LEFT COLUMN: Globe, Age + Socials, Skills */}
+        <div className="flex flex-col gap-5 w-full md:w-1/2">
+          {/* 1. Location Card with Rotating 3D Globe & Red Dot on Maharashtra */}
+          <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-3 sm:p-4 drop-shadow-sm flex flex-col justify-between overflow-hidden hover:border-zinc-700 transition-colors">
+            <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300">
+              <MapPin className="w-4 h-4 text-zinc-400" />
+              <h4 className="truncate font-medium text-white">Maharashtra, India</h4>
             </div>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-300">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-              <span>21.35° N, 74.88° E</span>
+            {/* Rotating 3D Globe */}
+            <div className="grow mt-2">
+              <Globe />
             </div>
           </div>
-        </div>
 
-        {/* Card 2: Daily Algorithmic Practice & DSA */}
-        <div className="glass-card rounded-xl p-5 flex flex-col justify-between">
-          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
-            <Trophy className="w-4 h-4 text-indigo-400" />
-            <h4 className="font-semibold text-zinc-200">Problem Solving</h4>
-          </div>
-
-          <div className="my-2">
-            <div className="text-4xl sm:text-5xl font-black text-white tracking-tight font-mono">
-              DAILY
+          {/* 2. Middle Row: Age & Socials */}
+          <div className="grid grid-cols-2 gap-5 w-full">
+            {/* Age Card */}
+            <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-3.5 sm:p-4 drop-shadow-sm flex flex-col justify-between hover:border-zinc-700 transition-colors">
+              <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300">
+                <Cake className="w-4 h-4 text-zinc-400" />
+                <h4 className="truncate font-medium text-white">Age</h4>
+              </div>
+              <div className="grow flex items-center justify-center py-4 sm:py-6">
+                <span className="text-8xl sm:text-9xl font-bold tracking-tighter text-white select-none leading-none">
+                  20
+                </span>
+              </div>
             </div>
-            <p className="text-xs sm:text-sm text-zinc-400 mt-2 leading-relaxed">
-              Practicing on <strong className="text-zinc-200">CodeChef</strong> &amp;{" "}
-              <strong className="text-zinc-200">LeetCode</strong> with a deep focus on Data Structures &amp; Algorithms.
-            </p>
-          </div>
 
-          <div className="flex items-center gap-3 pt-4 border-t border-white/[0.06] text-xs font-mono text-zinc-500">
-            <span className="flex items-center gap-1.5 text-zinc-400">
-              <CodeChefIcon className="w-3.5 h-3.5 text-cyan-400" />
-              <span>CodeChef</span>
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1.5 text-zinc-400">
-              <LeetCodeIcon className="w-3.5 h-3.5 text-cyan-400" />
-              <span>LeetCode</span>
-            </span>
-          </div>
-        </div>
-
-        {/* Card 3: Social Links List (Dino Style Stack) */}
-        <div className="glass-card rounded-xl p-5 flex flex-col justify-between">
-          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-3">
-            <Share2 className="w-4 h-4 text-cyan-400" />
-            <h4 className="font-semibold text-zinc-200">Socials</h4>
-          </div>
-
-          <div className="flex flex-col gap-2.5 my-1">
-            {socialLinksData.map((social) => {
-              if (social.url) {
-                return (
+            {/* Socials Card */}
+            <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-3.5 sm:p-4 drop-shadow-sm flex flex-col justify-between hover:border-zinc-700 transition-colors">
+              <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300">
+                <Link2 className="w-4 h-4 text-zinc-400" />
+                <h4 className="truncate font-medium text-white">Socials</h4>
+              </div>
+              <div className="grow flex items-center justify-center py-2 sm:py-3">
+                <div className="flex flex-col gap-2.5 w-full max-w-[130px]">
                   <a
-                    key={social.name}
-                    href={social.url}
+                    href="https://github.com/SuyashBorse"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between text-xs font-mono text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors py-1"
+                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
                   >
-                    <span className="flex items-center gap-2">
-                      {social.iconName === "github" && <GithubIcon className="w-3.5 h-3.5" />}
-                      <span>{social.name}</span>
-                    </span>
-                    <ExternalLink className="w-3 h-3 text-zinc-500" />
+                    <GithubIcon className="w-4 h-4 shrink-0" />
+                    <span>GitHub</span>
                   </a>
-                );
-              }
-              return (
-                <div
-                  key={social.name}
-                  className="flex items-center justify-between text-xs font-mono text-zinc-500 py-1"
-                >
-                  <span className="flex items-center gap-2">
-                    {social.iconName === "linkedin" && <LinkedinIcon className="w-3.5 h-3.5" />}
-                    {social.iconName === "codechef" && <CodeChefIcon className="w-3.5 h-3.5" />}
-                    {social.iconName === "leetcode" && <LeetCodeIcon className="w-3.5 h-3.5" />}
-                    <span>{social.name}</span>
-                  </span>
-                  <span className="text-[10px] text-zinc-600 bg-zinc-900/60 px-1 rounded">Soon</span>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                  >
+                    <InstagramIcon className="w-4 h-4 shrink-0" />
+                    <span>Instagram</span>
+                  </a>
+                  <a
+                    href="https://youtube.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                  >
+                    <YouTubeIcon className="w-4 h-4 shrink-0" />
+                    <span>YouTube</span>
+                  </a>
+                  <a
+                    href="https://x.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                  >
+                    <XTwitterIcon className="w-4 h-4 shrink-0" />
+                    <span>X (Twitter)</span>
+                  </a>
                 </div>
-              );
-            })}
+              </div>
+            </div>
           </div>
 
-          <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-zinc-500">
-            Open for collaborations
+          {/* 3. Skills Card with 2-Row Rotating Marquee */}
+          <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-3 sm:p-4 drop-shadow-sm flex flex-col justify-between overflow-hidden hover:border-zinc-700 transition-colors">
+            <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300 mb-2">
+              <Code2 className="w-4 h-4 text-zinc-400" />
+              <h4 className="truncate font-medium text-white">Skills</h4>
+            </div>
+
+            <div className="mask-gradient-x overflow-hidden py-1.5 space-y-3">
+              {/* Row 1: Leftward continuous rotating marquee */}
+              <div className="animate-marquee gap-3 sm:gap-4 items-center">
+                {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, idx) => (
+                  <div
+                    key={`row1-${skill.name}-${idx}`}
+                    title={skill.name}
+                    className="p-1 hover:scale-110 transition-transform duration-150 select-none cursor-pointer"
+                  >
+                    {skill.icon}
+                  </div>
+                ))}
+              </div>
+
+              {/* Row 2: Rightward reverse continuous rotating marquee */}
+              <div className="animate-marquee-reverse gap-3 sm:gap-4 items-center">
+                {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, idx) => (
+                  <div
+                    key={`row2-${skill.name}-${idx}`}
+                    title={skill.name}
+                    className="p-1 hover:scale-110 transition-transform duration-150 select-none cursor-pointer"
+                  >
+                    {skill.icon}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Card 4: Infinite Scrolling Skills Marquee (Col-span-2) */}
-        <div className="md:col-span-2 glass-card rounded-xl p-5 overflow-hidden">
-          <div className="flex items-center space-x-2 font-mono text-xs text-zinc-400 uppercase tracking-wider mb-4">
-            <Code2 className="w-4 h-4 text-indigo-400" />
-            <h4 className="font-semibold text-zinc-200">Tech Stack &amp; Tooling</h4>
-          </div>
-
-          {/* Marquee Rows with Edge Gradient Masks */}
-          <div className="mask-gradient-x overflow-hidden py-1 space-y-2.5">
-            {/* Row 1: Leftward Marquee */}
-            <div className="animate-marquee gap-2.5">
-              {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
-                <div
-                  key={`r1-${skill}-${index}`}
-                  className="px-3.5 py-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] backdrop-blur-md text-xs font-mono text-zinc-200 select-none hover:border-white/20 transition-colors"
-                >
-                  {skill}
-                </div>
-              ))}
+        {/* RIGHT COLUMN: Favorite Quotes (Spanning Full Height) */}
+        <div className="w-full md:w-1/2 flex">
+          <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-4 sm:p-5 drop-shadow-sm flex flex-col justify-between w-full hover:border-zinc-700 transition-colors">
+            <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300 mb-2">
+              <Quote className="w-4 h-4 text-zinc-400" />
+              <h4 className="truncate font-medium text-white">Favorite Quotes</h4>
             </div>
 
-            {/* Row 2: Rightward Reverse Marquee */}
-            <div className="animate-marquee-reverse gap-2.5">
-              {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
-                <div
-                  key={`r2-${skill}-${index}`}
-                  className="px-3.5 py-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] backdrop-blur-md text-xs font-mono text-zinc-200 select-none hover:border-white/20 transition-colors"
-                >
-                  {skill}
-                </div>
-              ))}
+            <div className="grow flex flex-col justify-between divide-y divide-zinc-800/80 my-2">
+              {/* Quote 1 */}
+              <figure className="flex flex-1 flex-col justify-center gap-3 px-3 py-6 sm:py-8 text-center first:pt-2">
+                <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-zinc-100 leading-snug tracking-normal">
+                  “If you can&#39;t explain it simply, you don&#39;t understand it well enough.”
+                </blockquote>
+                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
+                  — Albert Einstein
+                </figcaption>
+              </figure>
+
+              {/* Quote 2 */}
+              <figure className="flex flex-1 flex-col justify-center gap-3 px-3 py-6 sm:py-8 text-center">
+                <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-zinc-100 leading-snug tracking-normal">
+                  “It&#39;s not about how hard you row, it&#39;s about what boat you&#39;re in.”
+                </blockquote>
+                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
+                  — Warren Buffet
+                </figcaption>
+              </figure>
+
+              {/* Quote 3 */}
+              <figure className="flex flex-1 flex-col justify-center gap-3 px-3 py-6 sm:py-8 text-center last:pb-2">
+                <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-zinc-100 leading-snug tracking-normal">
+                  “Be yourself; everyone else is already taken.”
+                </blockquote>
+                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
+                  — Oscar Wilde
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>
