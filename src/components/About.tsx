@@ -116,7 +116,7 @@ export default function About() {
               </div>
               <div className="grow flex items-center justify-center py-4 sm:py-6">
                 <span className="text-8xl sm:text-9xl font-bold tracking-tighter text-white select-none leading-none">
-                  20
+                  19
                 </span>
               </div>
             </div>
