@@ -5,9 +5,8 @@ import { MapPin, Cake, Link2, Code2, Quote } from "lucide-react";
 import Globe, { type GlobeHandle } from "@/components/Globe";
 import {
   GithubIcon,
+  LinkedinIcon,
   InstagramIcon,
-  YouTubeIcon,
-  XTwitterIcon,
 } from "@/components/SocialIcons";
 import {
   HtmlLogo,
@@ -126,42 +125,33 @@ export default function About() {
                 <h4 className="truncate font-medium text-white">Socials</h4>
               </div>
               <div className="grow flex items-center justify-center py-2 sm:py-3">
-                <div className="flex flex-col gap-2.5 w-full max-w-[130px]">
+                <div className="flex flex-col gap-3 w-full max-w-[130px]">
                   <a
                     href="https://github.com/SuyashBorse"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                    className="flex items-center space-x-2.5 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
                   >
                     <GithubIcon className="w-4 h-4 shrink-0" />
                     <span>GitHub</span>
                   </a>
                   <a
+                    href="https://www.linkedin.com/in/suyash-borse"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2.5 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                  >
+                    <LinkedinIcon className="w-4 h-4 shrink-0" />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                    className="flex items-center space-x-2.5 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
                   >
                     <InstagramIcon className="w-4 h-4 shrink-0" />
                     <span>Instagram</span>
-                  </a>
-                  <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
-                  >
-                    <YouTubeIcon className="w-4 h-4 shrink-0" />
-                    <span>YouTube</span>
-                  </a>
-                  <a
-                    href="https://x.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
-                  >
-                    <XTwitterIcon className="w-4 h-4 shrink-0" />
-                    <span>X (Twitter)</span>
                   </a>
                 </div>
               </div>
