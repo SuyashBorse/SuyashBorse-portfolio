@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { animate, useInView } from "framer-motion";
 import { MapPin, Cake, Link2, Code2, Quote } from "lucide-react";
 import Globe, { type GlobeHandle } from "@/components/Globe";
 import {
@@ -33,6 +34,78 @@ import {
   DatabaseLogo,
   BrainCpuLogo,
 } from "@/components/TechLogos";
+
+function AnimatedAgeCard() {
+  const [age, setAge] = useState(0);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(cardRef, { once: false, amount: 0.4 });
+  const controlsRef = useRef<{ stop: () => void } | null>(null);
+
+  const startAnimation = useCallback(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setAge(19);
+      return;
+    }
+    controlsRef.current?.stop();
+    setAge(0);
+    const controls = animate(0, 19, {
+      duration: 1.3,
+      ease: [0.16, 1, 0.3, 1], // easeOutExpo: fast ramp-up then gentle deceleration
+      onUpdate: (latest) => {
+        setAge(Math.round(latest));
+      },
+    });
+    controlsRef.current = controls;
+  }, []);
+
+  useEffect(() => {
+    if (isInView) {
+      startAnimation();
+    }
+  }, [isInView, startAnimation]);
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (typeof window !== "undefined" && window.location.hash === "#about") {
+        startAnimation();
+      }
+    };
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, [startAnimation]);
+
+  return (
+    <div
+      ref={cardRef}
+      onClick={startAnimation}
+      className="border border-zinc-800 bg-[#09090b] rounded-lg p-3.5 sm:p-4 drop-shadow-sm flex flex-col justify-between hover:border-zinc-700 transition-colors cursor-pointer group select-none active:scale-[0.98]"
+      title="Click to replay age counter (0 to 19)"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          startAnimation();
+        }
+      }}
+    >
+      <div className="flex items-center justify-between text-sm font-medium text-zinc-300">
+        <div className="flex items-center space-x-2">
+          <Cake className="w-4 h-4 text-zinc-400 group-hover:text-pink-400 transition-colors" />
+          <h4 className="truncate font-medium text-white">Age</h4>
+        </div>
+        <span className="text-[10px] font-mono text-zinc-600 group-hover:text-zinc-400 transition-colors opacity-0 group-hover:opacity-100">
+          replay ↻
+        </span>
+      </div>
+      <div className="grow flex items-center justify-center py-4 sm:py-6">
+        <span className="text-8xl sm:text-9xl font-bold tracking-tighter text-white select-none leading-none tabular-nums font-mono sm:font-sans transition-transform group-hover:scale-105 duration-200">
+          {age}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 export default function About() {
   const row1Skills = [
@@ -105,18 +178,8 @@ export default function About() {
 
           {/* 2. Middle Row: Age & Socials */}
           <div className="grid grid-cols-2 gap-5 w-full">
-            {/* Age Card */}
-            <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-3.5 sm:p-4 drop-shadow-sm flex flex-col justify-between hover:border-zinc-700 transition-colors">
-              <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300">
-                <Cake className="w-4 h-4 text-zinc-400" />
-                <h4 className="truncate font-medium text-white">Age</h4>
-              </div>
-              <div className="grow flex items-center justify-center py-4 sm:py-6">
-                <span className="text-8xl sm:text-9xl font-bold tracking-tighter text-white select-none leading-none">
-                  19
-                </span>
-              </div>
-            </div>
+            {/* Age Card with 0 to 19 count animation */}
+            <AnimatedAgeCard />
 
             {/* Socials Card */}
             <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-3.5 sm:p-4 drop-shadow-sm flex flex-col justify-between hover:border-zinc-700 transition-colors">
