@@ -58,7 +58,7 @@ export const projectsData: Project[] = [
     role: "Frontend Developer",
     status: "Completed Project",
     githubUrl: "https://github.com/SuyashBorse/Currency-Converter",
-    liveDemoUrl: undefined,
+    liveDemoUrl: "https://currency-converter-orpin-eight.vercel.app",
   },
   {
     id: "vision-raksha",
