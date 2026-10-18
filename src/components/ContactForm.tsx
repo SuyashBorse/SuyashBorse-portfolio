@@ -121,7 +121,7 @@ export default function ContactForm() {
     >
       {/* Section Header */}
       <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white mb-5 sm:mb-6">
-        Work
+        Contact
       </h3>
 
       <motion.div
