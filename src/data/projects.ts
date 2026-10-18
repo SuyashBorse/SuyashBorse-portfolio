@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
     architecture:
       "Architected with modular modern JavaScript and CSS design tokens bundled via Vite 5.4. Backend services leverage Supabase PostgreSQL 17 with Row Level Security (RLS) policies and serverless Edge Functions to proxy Google Gemini API calls without exposing keys to the client. Visualizations are rendered via high-performance Chart.js 4.4 canvas layers.",
     techStack: ["Google Gemini AI", "Supabase", "PostgreSQL 17", "Chart.js", "Vite", "Vercel"],
-    date: "March 2025",
+    date: "August 2026",
     role: "Creator & Full-Stack Developer",
     status: "Live in Production",
     githubUrl: "https://github.com/SuyashBorse/Intelligent-Sustainability-Assistant-and-Carbon-Tracker",
@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
     architecture:
       "Engineered as a clean, modular vanilla JavaScript web application without heavy framework dependencies. Employs async/await over ES6 Promises to query CDN-cached exchange rate endpoints, binding country codes through a dictionary lookup table and manipulating the DOM tree with minimal reflows.",
     techStack: ["JavaScript (ES6+)", "HTML5", "CSS3", "Fetch API", "REST API", "DOM API"],
-    date: "December 2024",
+    date: "September 2026",
     role: "Frontend Developer",
     status: "Completed Project",
     githubUrl: "https://github.com/SuyashBorse/Currency-Converter",

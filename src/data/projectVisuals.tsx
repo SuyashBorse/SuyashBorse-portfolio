@@ -34,7 +34,7 @@ export function getProjectVisual(id: string): ProjectVisualConfig {
             <PostgresElephantLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
           </>
         ),
-        dateText: "March 2025",
+        dateText: "August 2026",
         badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
         gradient: "from-[#09090b] via-zinc-900 to-zinc-800/80",
       };
@@ -48,7 +48,7 @@ export function getProjectVisual(id: string): ProjectVisualConfig {
             <JsLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
           </>
         ),
-        dateText: "December 2024",
+        dateText: "September 2026",
         badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
         gradient: "from-[#09090b] via-zinc-900 to-zinc-800/80",
       };
