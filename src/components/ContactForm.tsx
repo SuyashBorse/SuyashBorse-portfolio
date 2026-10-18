@@ -116,10 +116,10 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="mt-16 sm:mt-28 mb-16 md:mb-28 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
+      className="mt-20 sm:mt-32 mb-20 md:mb-36 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
       aria-label="Work and Contact Section"
     >
-      {/* Section Header matching Dino Kupinic */}
+      {/* Section Header */}
       <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white mb-5 sm:mb-6">
         Work
       </h3>
@@ -129,32 +129,32 @@ export default function ContactForm() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="border border-zinc-800 bg-[#09090b] rounded-lg p-4 sm:p-5 flex flex-col md:flex-row gap-5 items-stretch shadow-sm hover:border-zinc-700 transition-colors"
+        className="border border-zinc-800 bg-[#09090b] rounded-lg p-5 sm:p-7 md:p-8 flex flex-col md:flex-row gap-6 sm:gap-8 items-stretch shadow-md hover:border-zinc-700 transition-colors"
       >
-        {/* Left Visual Container: Gradient Hero Banner */}
-        <div className="w-full md:w-1/2 flex items-center justify-center rounded-lg bg-gradient-to-t from-[#09090b] via-zinc-900 to-zinc-800/80 border border-zinc-800/80 p-8 sm:p-12 min-h-[220px] md:min-h-auto">
-          <h3 className="text-white text-center text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-tight select-none">
-            Let&#39;s make something great.
+        {/* Left Visual Container: Rich Vibrant Crimson/Red Gradient Hero Banner */}
+        <div className="w-full md:w-1/2 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#dc2626] via-[#881313] to-[#0c0202] border border-red-900/40 p-8 sm:p-14 min-h-[340px] sm:min-h-[460px] shadow-inner">
+          <h3 className="text-white text-center text-4xl sm:text-5xl md:text-[54px] font-bold tracking-tighter leading-[1.08] select-none max-w-xs mx-auto drop-shadow-sm">
+            Let&#39;s make<br />something great.
           </h3>
         </div>
 
-        {/* Right Container: Contact Form */}
-        <div className="w-full md:w-1/2 max-w-md flex flex-col justify-center mx-auto py-2">
+        {/* Right Container: Expanded Contact Form */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center py-2">
           <form onSubmit={handleSubmit} noValidate>
-            <div className="mb-4">
-              <h4 className="text-base sm:text-lg font-medium text-white mb-1">
+            <div className="mb-5 sm:mb-6">
+              <h4 className="text-lg sm:text-xl font-medium text-white mb-1.5">
                 Contact me
               </h4>
-              <p className="text-zinc-400 text-xs sm:text-sm leading-normal">
+              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
                 Fill out the form below and I will get back to you as soon as possible. Fields marked * are required.
               </p>
             </div>
 
             {/* 2-Column Name and Contact Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               {/* Firstname */}
               <div>
-                <label htmlFor="firstName" className="block text-xs font-medium text-zinc-300 mb-1">
+                <label htmlFor="firstName" className="block text-xs sm:text-sm font-medium text-zinc-300 mb-1.5">
                   Firstname *
                 </label>
                 <input
@@ -168,9 +168,9 @@ export default function ContactForm() {
                   required
                   aria-invalid={!!errors.firstName}
                   aria-describedby={errors.firstName ? "firstName-error" : undefined}
-                  className={`h-9 w-full rounded-md border ${
+                  className={`h-10 sm:h-11 w-full rounded-md border ${
                     errors.firstName ? "border-rose-500/80" : "border-zinc-800"
-                  } bg-zinc-950/60 px-3 py-1 text-sm text-white placeholder:text-zinc-600 focus:border-white focus:outline-none transition-colors`}
+                  } bg-[#09090b] px-3.5 text-sm text-white placeholder:text-zinc-600 focus:border-zinc-500 focus:outline-none transition-colors`}
                 />
                 {errors.firstName && (
                   <p id="firstName-error" className="mt-1 text-xs text-rose-400 font-mono">
@@ -181,7 +181,7 @@ export default function ContactForm() {
 
               {/* Lastname */}
               <div>
-                <label htmlFor="lastName" className="block text-xs font-medium text-zinc-300 mb-1">
+                <label htmlFor="lastName" className="block text-xs sm:text-sm font-medium text-zinc-300 mb-1.5">
                   Lastname *
                 </label>
                 <input
@@ -195,9 +195,9 @@ export default function ContactForm() {
                   required
                   aria-invalid={!!errors.lastName}
                   aria-describedby={errors.lastName ? "lastName-error" : undefined}
-                  className={`h-9 w-full rounded-md border ${
+                  className={`h-10 sm:h-11 w-full rounded-md border ${
                     errors.lastName ? "border-rose-500/80" : "border-zinc-800"
-                  } bg-zinc-950/60 px-3 py-1 text-sm text-white placeholder:text-zinc-600 focus:border-white focus:outline-none transition-colors`}
+                  } bg-[#09090b] px-3.5 text-sm text-white placeholder:text-zinc-600 focus:border-zinc-500 focus:outline-none transition-colors`}
                 />
                 {errors.lastName && (
                   <p id="lastName-error" className="mt-1 text-xs text-rose-400 font-mono">
@@ -208,7 +208,7 @@ export default function ContactForm() {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-xs font-medium text-zinc-300 mb-1">
+                <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-zinc-300 mb-1.5">
                   E-Mail *
                 </label>
                 <input
@@ -222,9 +222,9 @@ export default function ContactForm() {
                   required
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? "email-error" : undefined}
-                  className={`h-9 w-full rounded-md border ${
+                  className={`h-10 sm:h-11 w-full rounded-md border ${
                     errors.email ? "border-rose-500/80" : "border-zinc-800"
-                  } bg-zinc-950/60 px-3 py-1 text-sm text-white placeholder:text-zinc-600 focus:border-white focus:outline-none transition-colors`}
+                  } bg-[#09090b] px-3.5 text-sm text-white placeholder:text-zinc-600 focus:border-zinc-500 focus:outline-none transition-colors`}
                 />
                 {errors.email && (
                   <p id="email-error" className="mt-1 text-xs text-rose-400 font-mono">
@@ -235,7 +235,7 @@ export default function ContactForm() {
 
               {/* Phone */}
               <div>
-                <label htmlFor="phone" className="block text-xs font-medium text-zinc-300 mb-1">
+                <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-zinc-300 mb-1.5">
                   Phone number
                 </label>
                 <input
@@ -245,30 +245,33 @@ export default function ContactForm() {
                   autoComplete="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+91 98765 43210"
-                  className="h-9 w-full rounded-md border border-zinc-800 bg-zinc-950/60 px-3 py-1 text-sm text-white placeholder:text-zinc-600 focus:border-white focus:outline-none transition-colors"
+                  placeholder="+43 664 1234567"
+                  className="h-10 sm:h-11 w-full rounded-md border border-zinc-800 bg-[#09090b] px-3.5 text-sm text-white placeholder:text-zinc-600 focus:border-zinc-500 focus:outline-none transition-colors"
                 />
               </div>
             </div>
 
+            {/* Subtle Horizontal Divider Line */}
+            <div className="border-b border-zinc-800/80 my-4" />
+
             {/* Message Textarea */}
-            <div className="mb-4">
-              <label htmlFor="message" className="block text-xs font-medium text-zinc-300 mb-1">
+            <div className="mb-5">
+              <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-zinc-300 mb-1.5">
                 Message *
               </label>
               <textarea
                 id="message"
                 name="message"
-                rows={3}
+                rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Hi Suyash, I would like to discuss a project..."
+                placeholder=""
                 required
                 aria-invalid={!!errors.message}
                 aria-describedby={errors.message ? "message-error" : undefined}
                 className={`w-full rounded-md border ${
                   errors.message ? "border-rose-500/80" : "border-zinc-800"
-                } bg-zinc-950/60 p-3 text-sm text-white placeholder:text-zinc-600 focus:border-white focus:outline-none transition-colors min-h-[90px] max-h-[180px] resize-y`}
+                } bg-[#09090b] p-3.5 text-sm text-white placeholder:text-zinc-600 focus:border-zinc-500 focus:outline-none transition-colors h-32 sm:h-36 resize-none`}
               />
               {errors.message && (
                 <p id="message-error" className="mt-1 text-xs text-rose-400 font-mono">
@@ -281,7 +284,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full h-9 rounded-md bg-white text-zinc-950 hover:bg-zinc-200 font-medium text-xs sm:text-sm transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 select-none shadow-xs"
+              className="w-full h-10 sm:h-11 rounded-md bg-white text-zinc-950 hover:bg-zinc-200 font-medium text-sm transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 select-none shadow-sm"
             >
               {status === "loading" ? (
                 <>
@@ -297,7 +300,7 @@ export default function ContactForm() {
           {/* Feedback & Status Message */}
           {status !== "idle" && (
             <div
-              className={`mt-4 p-3 rounded-md border flex items-start gap-2.5 text-xs font-mono ${
+              className={`mt-4 p-3.5 rounded-md border flex items-start gap-2.5 text-xs font-mono ${
                 status === "success"
                   ? "bg-emerald-950/30 border-emerald-800/60 text-emerald-300"
                   : status === "unconfigured"
