@@ -155,8 +155,20 @@ export default function About() {
           <h4 className="truncate font-medium text-white">Biography</h4>
         </div>
         <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-          I&apos;m a 19-year-old software engineer based in Maharashtra, India, passionate about building responsive full-stack applications, intelligent AI-driven systems, and scalable backend architectures. With practical experience across modern JavaScript, Java, cloud databases, and machine learning workflows, I enjoy collaborating in fast-paced hackathons and developing software that creates tangible, real-world value.
+          I&apos;m <span className="text-white font-medium">Suyash Borse</span>, a B.Tech Information Technology student at <span className="text-zinc-100 font-medium">R. C. Patel Institute of Technology, Shirpur</span>. I am deeply passionate about engineering responsive full-stack applications, designing scalable backend architectures, and mastering <span className="text-zinc-100 font-medium">Data Structures &amp; Algorithms in Java</span>.
         </p>
+        <p className="text-zinc-300 text-sm sm:text-base leading-relaxed mt-2.5">
+          With practical experience across modern JavaScript, Java, cloud databases, and backend engineering, I thrive in collaborative hackathon environments where fast-paced teamwork turns ambitious concepts into software that delivers tangible, real-world value.
+        </p>
+        <div className="flex flex-wrap items-center gap-2 mt-4 pt-3.5 border-t border-zinc-800/80">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Current Focus: Problem Solving · DSA in Java · Spring Boot
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-400">
+            🎓 B.Tech IT · RCPIT Shirpur
+          </span>
+        </div>
       </div>
 
       {/* Main 2-Column Bento Container matching Dino Kupinic reference */}
