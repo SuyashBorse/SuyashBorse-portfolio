@@ -18,7 +18,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: ProjectPageProps) {
   const { id } = await params;
-  const project = projectsData.find((p) => p.id === id);
+  const project = projectsData.find((p) => p.id === id || (id === "ecopilot-ai" && p.id === "ecotrack"));
 
   if (!project) {
     return {
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const { id } = await params;
-  const project = projectsData.find((p) => p.id === id);
+  const project = projectsData.find((p) => p.id === id || (id === "ecopilot-ai" && p.id === "ecotrack"));
 
   if (!project) {
     notFound();
@@ -112,10 +112,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               href={project.liveDemoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-white text-zinc-950 font-medium text-xs sm:text-sm transition-colors hover:bg-zinc-200"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-white text-zinc-950 font-semibold text-xs sm:text-sm transition-all hover:bg-zinc-200 shadow-md active:scale-95"
             >
-              <ExternalLink className="w-4 h-4" />
-              <span>Live Demo</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span>Open Live Web Application</span>
+              <ExternalLink className="w-4 h-4 text-zinc-800" />
             </a>
           )}
         </div>

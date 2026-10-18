@@ -23,17 +23,18 @@ export interface ProjectVisualConfig {
 
 export function getProjectVisual(id: string): ProjectVisualConfig {
   switch (id) {
+    case "ecotrack":
     case "ecopilot-ai":
       return {
         icons: (
           <>
-            <PythonLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
-            <TypeScriptLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
-            <ReactLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <BrainCpuLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <SupabaseLightningLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <PostgresElephantLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
           </>
         ),
-        dateText: "September 2026",
-        badgeStyle: "bg-[#331407] border border-[#7c2d12]/60 text-[#ea580c] dark:text-[#fb923c]",
+        dateText: "March 2025",
+        badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
         gradient: "from-[#09090b] via-zinc-900 to-zinc-800/80",
       };
     case "kanflow":

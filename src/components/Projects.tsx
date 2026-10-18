@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projectsData } from "@/data/projects";
 import { getProjectVisual } from "@/data/projectVisuals";
@@ -45,6 +46,23 @@ export default function Projects() {
                 >
                   {/* Upper Large Visual Container (sm:h-80 md:h-[340px]) */}
                   <div className="relative flex h-72 sm:h-80 md:h-[340px] w-full items-center justify-center bg-gradient-to-t from-[#09090b] via-zinc-900 to-zinc-800/80 border-b border-zinc-800 overflow-hidden">
+                    {/* Live App Direct Link Button if project is live */}
+                    {project.liveDemoUrl && (
+                      <a
+                        href={project.liveDemoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white hover:bg-zinc-200 text-zinc-950 font-medium text-xs shadow-md transition-all active:scale-95"
+                        title={`Open ${project.title} live application`}
+                        aria-label={`Open ${project.title} live app`}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                        <span>Open Live App</span>
+                        <ExternalLink className="w-3 h-3 text-zinc-700" />
+                      </a>
+                    )}
+
                     {/* Big White Centered Tech Logos */}
                     <div className="flex items-center justify-center gap-4 sm:gap-5 select-none transition-transform duration-200 motion-safe:group-hover:scale-105">
                       {visual.icons}
@@ -62,11 +80,19 @@ export default function Projects() {
                   <div className="p-4 sm:p-5 flex flex-col justify-between flex-1">
                     <div>
                       <div className="flex items-center justify-between gap-2">
-                        <h4 className="text-base sm:text-lg font-semibold text-white tracking-tight truncate group-hover:text-zinc-200 transition-colors">
-                          {project.title}
-                        </h4>
+                        <div className="flex items-center gap-2 min-w-0">
+                          <h4 className="text-base sm:text-lg font-semibold text-white tracking-tight truncate group-hover:text-zinc-200 transition-colors">
+                            {project.title}
+                          </h4>
+                          {project.liveDemoUrl && (
+                            <span className="inline-flex items-center gap-1 rounded bg-emerald-950/80 border border-emerald-800/60 px-1.5 py-0.5 text-[10px] font-mono text-emerald-400">
+                              <span className="w-1 h-1 rounded-full bg-emerald-400"></span>
+                              Live
+                            </span>
+                          )}
+                        </div>
                         <span
-                          className="text-xs font-mono text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="text-xs font-mono text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
                           aria-hidden="true"
                         >
                           →

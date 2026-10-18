@@ -16,26 +16,27 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    id: "ecopilot-ai",
-    title: "EcoPilot AI",
-    description: "Intelligent sustainability engine optimizing environmental telemetry and resource planning.",
+    id: "ecotrack",
+    title: "EcoTrack",
+    description: "Personal carbon footprint tracker with GHG emission calculators, Chart.js analytics, and Google Gemini AI sustainability coaching.",
     longDescription:
-      "EcoPilot AI is an advanced environmental telemetry and sustainability intelligence platform. It ingests IoT sensor feeds, microclimate weather models, and industrial energy consumption metrics to provide real-time predictive analytics and anomaly detection. Built to assist organizations in meeting green compliance targets and reducing carbon footprint through automated scheduling and energy optimization recommendations.",
+      "EcoTrack is an intelligent, full-featured personal carbon footprint tracking web application. Built strictly upon validated IPCC and GHG Protocol emission factor coefficients, it empowers users to calculate and monitor greenhouse gas emissions across Transportation, Energy, Food, Water, and Shopping. The platform features dynamic multi-period Chart.js visualizations, a gamification streak engine with canvas confetti celebrations, and a personalized Google Gemini AI sustainability coach that provides non-judgmental decarbonization strategies with estimated monthly kg CO2e savings.",
     keyFeatures: [
-      "Real-time IoT sensor telemetry ingestion with sub-second anomaly detection.",
-      "Predictive energy consumption modeling using lightweight time-series forecasting.",
-      "Automated resource scheduling recommendations to lower peak-demand electricity tariffs.",
-      "Interactive carbon footprint audit dashboard with exportable compliance reports.",
-      "Role-based access control for team collaborators and environmental safety officers.",
+      "Multi-Category Carbon Calculator: Tracks Transportation, Energy, Food, Water, and Shopping based on validated IPCC and GHG Protocol coefficients.",
+      "Google Gemini AI Sustainability Coach: Personalized, structured AI recommendations with difficulty tiers and estimated monthly CO2e savings.",
+      "Dynamic Chart.js Visualizations: Interactive Doughnut category breakdowns, Polar Area distributions, and multi-period trend tracking (7/30/90 days, 1 year).",
+      "Gamification & Habit Building Engine: Strict 24-hour streak recalculation, eco-points, milestones, and interactive HTML5 canvas confetti badge celebrations.",
+      "Hybrid Cloud & Local Storage: Instant client-side persistence with 1-click rich demo plus Supabase PostgreSQL 17 with Row Level Security (RLS) and Google OAuth.",
+      "100% Mobile-First Responsive Design: Modular CSS tokens, adaptive sidebar, and touch-optimized activity logging drawers.",
     ],
     architecture:
-      "Engineered with a high-performance Next.js and TypeScript frontend connected to FastAPI Python microservices. Data streams are processed with Pandas and Scikit-learn, storing time-series aggregates in PostgreSQL with TimescaleDB extensions for rapid analytical queries.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Python", "PostgreSQL", "FastAPI"],
-    date: "September 2026",
-    role: "Full-Stack & ML Engineer",
-    status: "Active Project",
-    githubUrl: "https://github.com/SuyashBorse",
-    liveDemoUrl: undefined,
+      "Architected with modular modern JavaScript and CSS design tokens bundled via Vite 5.4. Backend services leverage Supabase PostgreSQL 17 with Row Level Security (RLS) policies and serverless Edge Functions to proxy Google Gemini API calls without exposing keys to the client. Visualizations are rendered via high-performance Chart.js 4.4 canvas layers.",
+    techStack: ["Google Gemini AI", "Supabase", "PostgreSQL 17", "Chart.js", "Vite", "Vercel"],
+    date: "March 2025",
+    role: "Creator & Full-Stack Developer",
+    status: "Live in Production",
+    githubUrl: "https://github.com/SuyashBorse/Intelligent-Sustainability-Assistant-and-Carbon-Tracker",
+    liveDemoUrl: "https://ecotrack-app-peach.vercel.app/",
   },
   {
     id: "kanflow",
