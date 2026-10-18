@@ -140,7 +140,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mt-16 sm:mt-28 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
+      className="mt-12 sm:mt-20 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
       aria-label="About Suyash Anil Borse"
     >
       {/* Section Header */}

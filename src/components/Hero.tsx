@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section
-      id="hero"
-      className="mt-20 sm:mt-28 md:mt-40 mb-16 sm:mb-24 md:mb-32 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto select-none"
+      id="home"
+      className="mt-20 sm:mt-28 md:mt-36 mb-12 sm:mb-16 md:mb-20 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto select-none scroll-mt-28"
       aria-label="Introduction Hero"
     >
       {/* Giant Editorial Heading (Dino Kupinic Style) */}

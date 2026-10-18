@@ -10,19 +10,19 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
   return (
     <div className="flex flex-col items-center w-full">
-      {/* 1. Hero Section — Giant Editorial Typography */}
+      {/* 1. Home Section — Hero Typography */}
       <Hero />
 
-      {/* 2. Projects Showcase — Visual Card Banners */}
-      <Projects />
-
-      {/* 3. About Me Section — Bento Grid & Infinite Tech Marquee */}
+      {/* 2. About Section — Bento Grid & Interactive Components */}
       <About />
 
-      {/* 4. Skills Section — Categorical Inventory */}
+      {/* 3. Skills Section — Categorical Inventory */}
       <Skills />
 
-      {/* 5. Contact Section — Minimalist Message Form */}
+      {/* 4. Projects Showcase — Visual 2x2 Showcase */}
+      <Projects />
+
+      {/* 5. Contact Section — Message Form */}
       <ContactForm />
     </div>
   );
