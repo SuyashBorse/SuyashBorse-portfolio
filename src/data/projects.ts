@@ -120,48 +120,4 @@ export const projectsData: Project[] = [
     liveDemoUrl: "https://internship-lifecycle-management-pla.vercel.app",
     isBlueprint: false,
   },
-  {
-    id: "tourney",
-    title: "Tourney",
-    description: "Web application for managing school sports tournaments with real-time brackets.",
-    longDescription:
-      "Tourney is an automated sports tournament management system designed to eliminate manual spreadsheet coordination. Built with Nuxt, Supabase, and PM2, it provides live scoring, dynamic single/double-elimination bracket generation, and an organizer dashboard for referees and teams.",
-    keyFeatures: [
-      "Multi-sport tournament creation supporting football, basketball, and volleyball formats.",
-      "Automated bracket seeding with live interactive bracket tree visualization.",
-      "Real-time score submission with instant standings and tiebreaker calculations.",
-      "Mobile-friendly referee scoreboard interface for pitch-side updates.",
-      "Public spectator portal with live match notifications and schedules.",
-    ],
-    architecture:
-      "Constructed on a Nuxt monorepo with Vue.js, TypeScript, and Tailwind CSS. The backend leverages Supabase with custom SQL functions and triggers specifically designed for bracket tree logic.",
-    techStack: ["Nuxt", "Supabase", "PM2"],
-    date: "September 2024",
-    role: "Web Application Engineer",
-    status: "Completed",
-    githubUrl: undefined,
-    liveDemoUrl: undefined,
-  },
-  {
-    id: "blackrose",
-    title: "Blackrose",
-    description: "Open-source decision layer for LLM apps with typed safety checks and guardrails.",
-    longDescription:
-      "Blackrose is a high-performance orchestration and policy-enforcement layer designed to prevent hallucination, prompt injection, and PII leakage in production Large Language Model applications. It enforces strict type contracts and deterministic safety policies around generative AI pipelines.",
-    keyFeatures: [
-      "Deterministic runtime schema validation for LLM structured output.",
-      "Real-time prompt sanitization and adversarial injection detection filter.",
-      "Automated PII and confidential token redaction before model inference.",
-      "Fallback routing and automatic retry logic for malformed JSON responses.",
-      "Comprehensive tracing and observability logger compatible with OpenTelemetry.",
-    ],
-    architecture:
-      "Dual Python and TypeScript SDK core implementing asynchronous middleware interceptors for popular LLM APIs, providing zero-overhead validation and strict typing.",
-    techStack: ["Python", "TypeScript"],
-    date: "May 2024",
-    role: "Core Contributor",
-    status: "Active Library",
-    githubUrl: undefined,
-    liveDemoUrl: undefined,
-  },
 ];

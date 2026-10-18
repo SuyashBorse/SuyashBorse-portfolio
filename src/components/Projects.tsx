@@ -113,16 +113,18 @@ export default function Projects() {
         </AnimatePresence>
       </div>
 
-      {/* All Projects Expand / Toggle Button */}
-      <div className="mt-6 sm:mt-8">
-        <button
-          type="button"
-          onClick={() => setShowAll(!showAll)}
-          className="inline-flex items-center justify-center rounded-sm bg-white text-zinc-950 font-medium text-xs sm:text-sm px-4 py-2 hover:bg-zinc-200 transition-colors shadow-xs cursor-pointer select-none"
-        >
-          {showAll ? "Show Less" : "All Projects"}
-        </button>
-      </div>
+      {/* All Projects Expand / Toggle Button if additional projects exist */}
+      {projectsData.length > 4 && (
+        <div className="mt-6 sm:mt-8">
+          <button
+            type="button"
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center justify-center rounded-sm bg-white text-zinc-950 font-medium text-xs sm:text-sm px-4 py-2 hover:bg-zinc-200 transition-colors shadow-xs cursor-pointer select-none"
+          >
+            {showAll ? "Show Less" : "All Projects"}
+          </button>
+        </div>
+      )}
     </section>
   );
 }
