@@ -140,11 +140,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mt-4 sm:mt-6 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
+      className="mt-2 sm:mt-3 max-w-5xl mx-auto px-4 scroll-mt-20 w-full"
       aria-label="About Suyash Anil Borse"
     >
       {/* Section Header */}
-      <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white mb-5 sm:mb-6">
+      <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white mb-8 sm:mb-12">
         About me
       </h3>
 
