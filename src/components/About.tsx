@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { animate, useInView } from "framer-motion";
-import { MapPin, Cake, Link2, Code2, Quote } from "lucide-react";
+import { MapPin, Cake, Link2, Code2, Quote, User } from "lucide-react";
 import Globe, { type GlobeHandle } from "@/components/Globe";
 import {
   GithubIcon,
@@ -147,6 +147,17 @@ export default function About() {
       <h3 className="font-semibold tracking-tighter text-2xl sm:text-3xl text-white mb-5 sm:mb-6">
         About me
       </h3>
+
+      {/* 0. Small Description / Bio Box */}
+      <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-4 sm:p-5 drop-shadow-sm hover:border-zinc-700 transition-colors mb-5 w-full">
+        <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300 mb-2.5">
+          <User className="w-4 h-4 text-zinc-400" />
+          <h4 className="truncate font-medium text-white">Biography</h4>
+        </div>
+        <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+          I&apos;m a 19-year-old software engineer based in Maharashtra, India, passionate about building responsive full-stack applications, intelligent AI-driven systems, and scalable backend architectures. With practical experience across modern JavaScript, Java, cloud databases, and machine learning workflows, I enjoy collaborating in fast-paced hackathons and developing software that creates tangible, real-world value.
+        </p>
+      </div>
 
       {/* Main 2-Column Bento Container matching Dino Kupinic reference */}
       <div className="flex flex-col md:flex-row gap-5 items-stretch w-full">
