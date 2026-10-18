@@ -52,16 +52,17 @@ export function getProjectVisual(id: string): ProjectVisualConfig {
         badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
         gradient: "from-[#09090b] via-zinc-900 to-zinc-800/80",
       };
+    case "vision-raksha":
     case "sih-2026":
       return {
         icons: (
           <>
-            <NextLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
             <BrainCpuLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
-            <DatabaseLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <PythonLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <ReactLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
           </>
         ),
-        dateText: "May 2025",
+        dateText: "September 2026",
         badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
         gradient: "from-[#09090b] via-zinc-900 to-zinc-800/80",
       };

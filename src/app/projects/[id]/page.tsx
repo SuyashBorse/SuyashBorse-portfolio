@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: ProjectPageProps) {
     (p) =>
       p.id === id ||
       (id === "ecopilot-ai" && p.id === "ecotrack") ||
-      (id === "kanflow" && p.id === "currency-converter")
+      (id === "kanflow" && p.id === "currency-converter") ||
+      (id === "sih-2026" && p.id === "vision-raksha")
   );
 
   if (!project) {
@@ -43,7 +44,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     (p) =>
       p.id === id ||
       (id === "ecopilot-ai" && p.id === "ecotrack") ||
-      (id === "kanflow" && p.id === "currency-converter")
+      (id === "kanflow" && p.id === "currency-converter") ||
+      (id === "sih-2026" && p.id === "vision-raksha")
   );
 
   if (!project) {
