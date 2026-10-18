@@ -1,6 +1,6 @@
 import React from "react";
 
-export function ReactLogo({ className = "w-9 h-9" }: { className?: string }) {
+export function ReactLogo({ className = "w-11 h-11" }: { className?: string }) {
   return (
     <svg className={className} viewBox="-11.5 -10.23174 23 20.46348" fill="currentColor">
       <circle cx="0" cy="0" r="2.05" fill="currentColor" />
@@ -13,7 +13,7 @@ export function ReactLogo({ className = "w-9 h-9" }: { className?: string }) {
   );
 }
 
-export function TypeScriptLogo({ className = "w-9 h-9" }: { className?: string }) {
+export function TypeScriptLogo({ className = "w-11 h-11" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 32 32" fill="currentColor">
       <rect width="32" height="32" rx="4" fill="currentColor" />
@@ -25,7 +25,7 @@ export function TypeScriptLogo({ className = "w-9 h-9" }: { className?: string }
   );
 }
 
-export function NextLogo({ className = "w-9 h-9" }: { className?: string }) {
+export function NextLogo({ className = "w-11 h-11" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 180 180" fill="none">
       <circle cx="90" cy="90" r="90" fill="currentColor" />
@@ -38,7 +38,7 @@ export function NextLogo({ className = "w-9 h-9" }: { className?: string }) {
   );
 }
 
-export function PythonLogo({ className = "w-9 h-9" }: { className?: string }) {
+export function PythonLogo({ className = "w-11 h-11" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
       <path d="M11.914 0C5.825 0 6.2 2.656 6.2 2.656l.006 2.752h5.814v.826H3.92S0 5.78 0 11.908c0 6.13 3.418 5.925 3.418 5.925h2.04v-2.872s-.11-3.418 3.34-3.418h5.737v-.855H8.718v-3.79s-.07-2.923 3.2-2.923h5.952S21.05 4 21.05 10.024c0 6.023-3.483 5.86-3.483 5.86l-2.039.006v2.871s.11 3.42-3.34 3.42H6.452v.855h5.819v3.789s.07 2.924-3.2 2.924H3.12S-1.213 29.745-.213 23.722" />
@@ -49,7 +49,7 @@ export function PythonLogo({ className = "w-9 h-9" }: { className?: string }) {
   );
 }
 
-export function TailwindLogo({ className = "w-9 h-9" }: { className?: string }) {
+export function TailwindLogo({ className = "w-11 h-11" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
       <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
@@ -57,7 +57,7 @@ export function TailwindLogo({ className = "w-9 h-9" }: { className?: string }) 
   );
 }
 
-export function DatabaseLogo({ className = "w-9 h-9" }: { className?: string }) {
+export function DatabaseLogo({ className = "w-11 h-11" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -67,7 +67,7 @@ export function DatabaseLogo({ className = "w-9 h-9" }: { className?: string }) 
   );
 }
 
-export function BrainCpuLogo({ className = "w-9 h-9" }: { className?: string }) {
+export function BrainCpuLogo({ className = "w-11 h-11" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect width="16" height="16" x="4" y="4" rx="2" />
@@ -80,6 +80,56 @@ export function BrainCpuLogo({ className = "w-9 h-9" }: { className?: string }) 
       <path d="M20 9h2" />
       <path d="M9 2v2" />
       <path d="M9 20v2" />
+    </svg>
+  );
+}
+
+export function PostgresElephantLogo({ className = "w-11 h-11" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.109 1.1813.2201 1.7766-.6399.1979-1.3364.5126-2.072 1.0189-.8861.6111-1.6669 1.343-2.3117 2.1645-.2517-.3013-.5097-.5977-.7755-.8882zm9.141 2.2223c.3195 0 .6109.1173.8341.3116-.2792.3081-.6067.5878-.9738.8329-.3671-.2451-.6946-.5248-.9738-.833a1.2673 1.2673 0 0 1 .8335-.3115zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z" />
+    </svg>
+  );
+}
+
+export function CloudLogo({ className = "w-11 h-11" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16.5088 16.8447c.1475-.5068.0908-.9707-.1553-1.3154-.2246-.3164-.6045-.499-1.0615-.5205l-8.6592-.1123a.1559.1559 0 0 1-.1333-.0713c-.0283-.042-.0351-.0986-.021-.1553.0278-.084.1123-.1484.2036-.1562l8.7359-.1123c1.0351-.0489 2.1601-.8868 2.5537-1.9136l.499-1.3013c.0215-.0561.0293-.1128.0147-.168-.5625-2.5463-2.835-4.4453-5.5499-4.4453-2.5039 0-4.6284 1.6177-5.3876 3.8614-.4927-.3658-1.1187-.5625-1.794-.499-1.2026.119-2.1665 1.083-2.2861 2.2856-.0283.31-.0069.6128.0635.894C1.5683 13.171 0 14.7754 0 16.752c0 .1748.0142.3515.0352.5273.0141.083.0844.1475.1689.1475h15.9814c.0909 0 .1758-.0645.2032-.1553l.12-.4268zm2.7568-5.5634c-.0771 0-.1611 0-.2383.0112-.0566 0-.1054.0415-.127.0976l-.3378 1.1744c-.1475.5068-.0918.9707.1543 1.3164.2256.3164.6055.498 1.0625.5195l1.8437.1133c.0557 0 .1055.0263.1329.0703.0283.043.0351.1074.0214.1562-.0283.084-.1132.1485-.204.1553l-1.921.1123c-1.041.0488-2.1582.8867-2.5527 1.914l-.1406.3585c-.0283.0713.0215.1416.0986.1416h6.5977c.0771 0 .1474-.0489.169-.126.1122-.4082.1757-.837.1757-1.2803 0-2.6025-2.125-4.727-4.7344-4.727z" />
+    </svg>
+  );
+}
+
+export function NuxtTriangleLogo({ className = "w-11 h-11" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M8.7 17.5H2.4L9.5 5.2c.4-.7 1.4-.7 1.8 0l2.8 4.8-2.6 4.5c-.5.9-.9 1.6-1.8 1.6zm12.9 0h-7.8l-4-6.9 2.5-4.4c.4-.7 1.4-.7 1.8 0l7.5 11.3z" />
+    </svg>
+  );
+}
+
+export function SupabaseLightningLogo({ className = "w-11 h-11" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+    </svg>
+  );
+}
+
+export function Pm2ToolingLogo({ className = "w-11 h-11" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 2 7 12 12 22 7 12 2" />
+      <polyline points="2 17 12 22 22 17" />
+      <polyline points="2 12 12 17 22 12" />
+    </svg>
+  );
+}
+
+export function JavaCupLogo({ className = "w-11 h-11" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9.1 19.9s-1.8.1-2.6.2c-1.1.2-1.3.6-.8.8 1.4.6 4.3.5 6.9.3 2.7-.2 5.4.1 6.3.8.3.2.4.4.1.6-1.2.6-7.3.7-11.8-.4-1-.3-2.1-.9-1.3-1.6.8-.7 3.2-.7 3.2-.7zm-.5-2.5s-2.1.2-3.1.4c-1.3.2-1.6.7-.9 1 1.7.7 5.2.6 8.3.4 3.2-.3 6.5.1 7.6 1 .3.2.5.5.2.7-1.4.8-8.7.9-14.2-.5-1.2-.3-2.5-1-1.6-2 1-.9 3.7-.9 3.7-.9zm4.6-5.8c.8 1.2-.6 2.4-.6 2.4s2.3-.9 1.4-2.8c-.8-1.7-2.3-2.3-1.5-4 1.3-2.6-1.3-4.2-1.3-4.2s.5 1.2-.4 2.4c-1.1 1.5-.7 2.6-.2 3.6.8 1.4 1.6 1.4 2.6 2.6zm-2.4-7.2c-.5.8.4 1.8.4 1.8s-.9-.8-.6-1.7c.3-.9.9-1.2.9-1.9 0-.9-.7-1.4-.7-1.4s.5.6.3 1.1c-.1.6-.3 1-.3 1.5-.1.3 0 .7.1.7z" />
     </svg>
   );
 }
