@@ -12,6 +12,7 @@ import {
   NuxtTriangleLogo,
   SupabaseLightningLogo,
   Pm2ToolingLogo,
+  JavaCupLogo,
 } from "@/components/TechLogos";
 import { HtmlLogo, CssLogo, JsLogo } from "@/components/SkillMarqueeIcons";
 
@@ -66,16 +67,18 @@ export function getProjectVisual(id: string): ProjectVisualConfig {
         badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
         gradient: "from-[#09090b] via-zinc-900 to-zinc-800/80",
       };
+    case "vilp":
+    case "internship-lifecycle-management-platform":
     case "sniptide":
       return {
         icons: (
           <>
-            <NextLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
-            <PostgresElephantLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
-            <CloudLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <JavaCupLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <ReactLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
+            <SupabaseLightningLogo className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-100" />
           </>
         ),
-        dateText: "May 2025",
+        dateText: "August 2026",
         badgeStyle: "bg-[#052e16] border border-[#14532d]/60 text-[#22c55e] dark:text-[#4ade80]",
         gradient: "from-[#09090b] via-zinc-900 to-zinc-800/80",
       };

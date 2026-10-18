@@ -23,7 +23,9 @@ export async function generateMetadata({ params }: ProjectPageProps) {
       p.id === id ||
       (id === "ecopilot-ai" && p.id === "ecotrack") ||
       (id === "kanflow" && p.id === "currency-converter") ||
-      (id === "sih-2026" && p.id === "vision-raksha")
+      (id === "sih-2026" && p.id === "vision-raksha") ||
+      (id === "internship-lifecycle-management-platform" && p.id === "vilp") ||
+      (id === "sniptide" && p.id === "vilp")
   );
 
   if (!project) {
@@ -45,7 +47,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       p.id === id ||
       (id === "ecopilot-ai" && p.id === "ecotrack") ||
       (id === "kanflow" && p.id === "currency-converter") ||
-      (id === "sih-2026" && p.id === "vision-raksha")
+      (id === "sih-2026" && p.id === "vision-raksha") ||
+      (id === "internship-lifecycle-management-platform" && p.id === "vilp") ||
+      (id === "sniptide" && p.id === "vilp")
   );
 
   if (!project) {

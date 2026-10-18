@@ -10,8 +10,8 @@ import { getProjectVisual } from "@/data/projectVisuals";
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
-  // Suyash's real projects (EcoPilot AI, KanFlow, SIH 2026) are first 3 in projectsData
-  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 3);
+  // Suyash's real projects (EcoTrack, Currency Converter, VisionRaksha, VILP) are first 4 in projectsData
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 4);
 
   return (
     <section
@@ -25,7 +25,7 @@ export default function Projects() {
       </h3>
 
       {/* Grid of Dino Kupinic Large Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         <AnimatePresence>
           {displayedProjects.map((project, idx) => {
             const visual = getProjectVisual(project.id);
