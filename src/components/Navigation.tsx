@@ -10,10 +10,10 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "/#projects" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navigation() {
@@ -53,7 +53,7 @@ export default function Navigation() {
           {/* Left: Star + SB Brand Logo (Matching reference screenshot) */}
           <div className="flex-1 flex items-center justify-start">
             <a
-              href="#"
+              href="/"
               className="flex items-center gap-2 text-white hover:opacity-90 transition-opacity"
               aria-label="Suyash Borse home"
             >
