@@ -18,7 +18,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: ProjectPageProps) {
   const { id } = await params;
-  const project = projectsData.find((p) => p.id === id || (id === "ecopilot-ai" && p.id === "ecotrack"));
+  const project = projectsData.find(
+    (p) =>
+      p.id === id ||
+      (id === "ecopilot-ai" && p.id === "ecotrack") ||
+      (id === "kanflow" && p.id === "currency-converter")
+  );
 
   if (!project) {
     return {
@@ -34,7 +39,12 @@ export async function generateMetadata({ params }: ProjectPageProps) {
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const { id } = await params;
-  const project = projectsData.find((p) => p.id === id || (id === "ecopilot-ai" && p.id === "ecotrack"));
+  const project = projectsData.find(
+    (p) =>
+      p.id === id ||
+      (id === "ecopilot-ai" && p.id === "ecotrack") ||
+      (id === "kanflow" && p.id === "currency-converter")
+  );
 
   if (!project) {
     notFound();
