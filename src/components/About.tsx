@@ -49,8 +49,8 @@ function AnimatedAgeCard() {
     controlsRef.current?.stop();
     setAge(0);
     const controls = animate(0, 19, {
-      duration: 1.3,
-      ease: [0.16, 1, 0.3, 1], // easeOutExpo: fast ramp-up then gentle deceleration
+      duration: 2.3,
+      ease: [0.25, 0.1, 0.25, 1], // smooth, balanced medium ease
       onUpdate: (latest) => {
         setAge(Math.round(latest));
       },
