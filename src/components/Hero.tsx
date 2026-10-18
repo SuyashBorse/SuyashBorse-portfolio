@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto select-none scroll-mt-16 py-12"
+      className="min-h-[58vh] sm:min-h-[64vh] md:min-h-[68vh] flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto select-none scroll-mt-20 pt-16 sm:pt-20 md:pt-24 pb-8"
       aria-label="Introduction Hero"
     >
       {/* Giant Editorial Heading (Dino Kupinic Style) */}
