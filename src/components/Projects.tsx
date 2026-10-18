@@ -39,30 +39,29 @@ export default function Projects() {
                 transition={{ duration: 0.35, delay: idx * 0.06 }}
                 className="h-full"
               >
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="flex flex-col h-full border border-zinc-800 bg-[#09090b] rounded-sm overflow-hidden hover:border-zinc-700 transition-[border-color,transform] shadow-sm group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
-                  aria-label={`View details for ${project.title}`}
-                >
-                  {/* Upper Large Visual Container (sm:h-80 md:h-[340px]) */}
-                  <div className="relative flex h-72 sm:h-80 md:h-[340px] w-full items-center justify-center bg-gradient-to-t from-[#09090b] via-zinc-900 to-zinc-800/80 border-b border-zinc-800 overflow-hidden">
-                    {/* Live App Direct Link Button if project is live */}
-                    {project.liveDemoUrl && (
-                      <a
-                        href={project.liveDemoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white hover:bg-zinc-200 text-zinc-950 font-medium text-xs shadow-md transition-all active:scale-95"
-                        title={`Open ${project.title} live application`}
-                        aria-label={`Open ${project.title} live app`}
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
-                        <span>Open Live App</span>
-                        <ExternalLink className="w-3 h-3 text-zinc-700" />
-                      </a>
-                    )}
+                <div className="relative flex flex-col h-full border border-zinc-800 bg-[#09090b] rounded-sm overflow-hidden hover:border-zinc-700 transition-[border-color,transform] shadow-sm group">
+                  {/* Live App Direct Link Button if project is live */}
+                  {project.liveDemoUrl && (
+                    <a
+                      href={project.liveDemoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute top-3 left-3 z-20 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white hover:bg-zinc-200 text-zinc-950 font-medium text-xs shadow-md transition-all active:scale-95"
+                      title={`Open ${project.title} live application`}
+                      aria-label={`Open ${project.title} live app`}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                      <span>Open Live App</span>
+                      <ExternalLink className="w-3 h-3 text-zinc-700" />
+                    </a>
+                  )}
 
+                  {/* Upper Large Visual Container (sm:h-80 md:h-[340px]) */}
+                  <Link
+                    href={`/projects/${project.id}`}
+                    className="relative flex h-72 sm:h-80 md:h-[340px] w-full items-center justify-center bg-gradient-to-t from-[#09090b] via-zinc-900 to-zinc-800/80 border-b border-zinc-800 overflow-hidden cursor-pointer"
+                    aria-label={`View details for ${project.title}`}
+                  >
                     {/* Big White Centered Tech Logos */}
                     <div className="flex items-center justify-center gap-4 sm:gap-5 select-none transition-transform duration-200 motion-safe:group-hover:scale-105">
                       {visual.icons}
@@ -74,10 +73,14 @@ export default function Projects() {
                     >
                       {visual.dateText}
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Lower Content */}
-                  <div className="p-4 sm:p-5 flex flex-col justify-between flex-1">
+                  <Link
+                    href={`/projects/${project.id}`}
+                    className="p-4 sm:p-5 flex flex-col justify-between flex-1 cursor-pointer"
+                    aria-label={`Read more about ${project.title}`}
+                  >
                     <div>
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2 min-w-0">
@@ -102,8 +105,8 @@ export default function Projects() {
                         {project.description}
                       </p>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               </motion.div>
             );
           })}
