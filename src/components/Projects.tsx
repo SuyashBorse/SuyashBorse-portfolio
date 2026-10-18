@@ -109,16 +109,6 @@ export default function Projects() {
           );
         })}
       </div>
-
-      {/* All Projects Button */}
-      <div className="mt-6">
-        <a
-          href="#projects"
-          className="inline-flex items-center justify-center rounded-sm bg-white text-zinc-950 font-medium text-xs sm:text-sm px-4 py-2 hover:bg-zinc-200 transition-colors shadow-xs"
-        >
-          All Projects
-        </a>
-      </div>
     </section>
   );
 }
