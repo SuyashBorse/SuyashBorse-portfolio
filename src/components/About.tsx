@@ -108,31 +108,31 @@ function AnimatedAgeCard() {
 
 export default function About() {
   const row1Skills = [
-    { name: "Java", icon: <JavaLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "JavaScript", icon: <JsLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "TypeScript", icon: <TsLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "HTML5", icon: <HtmlLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "CSS3", icon: <CssLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "C", icon: <CLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Tailwind CSS", icon: <TailwindSkillLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Figma", icon: <FigmaLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Vite", icon: <ViteLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Git", icon: <GitLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "GitHub", icon: <GithubSkillLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "Java", icon: <JavaLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "JavaScript", icon: <JsLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "TypeScript", icon: <TsLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "HTML5", icon: <HtmlLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "CSS3", icon: <CssLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "C", icon: <CLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Tailwind CSS", icon: <TailwindSkillLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Figma", icon: <FigmaLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Vite", icon: <ViteLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Git", icon: <GitLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "GitHub", icon: <GithubSkillLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
   ];
 
   const row2Skills = [
-    { name: "VS Code", icon: <VsCodeLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Maven", icon: <MavenLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Gradle", icon: <GradleLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Postman", icon: <PostmanLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Spring", icon: <SpringLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "MySQL", icon: <MySqlLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "PostgreSQL", icon: <PostgresLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Supabase", icon: <SupabaseLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Firebase", icon: <FirebaseLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Cloud Firestore", icon: <FirestoreLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
-    { name: "Google Cloud Console", icon: <GoogleCloudLogo className="w-9 h-9 sm:w-11 sm:h-11 text-zinc-100" /> },
+    { name: "VS Code", icon: <VsCodeLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Maven", icon: <MavenLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Gradle", icon: <GradleLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Postman", icon: <PostmanLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Spring", icon: <SpringLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "MySQL", icon: <MySqlLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "PostgreSQL", icon: <PostgresLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Supabase", icon: <SupabaseLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Firebase", icon: <FirebaseLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Cloud Firestore", icon: <FirestoreLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
+    { name: "Google Cloud Console", icon: <GoogleCloudLogo className="w-9 h-9 sm:w-10 sm:h-10 text-zinc-100" /> },
   ];
 
   const globeRef = React.useRef<GlobeHandle>(null);
@@ -251,29 +251,49 @@ export default function About() {
               <h4 className="truncate font-medium text-white">Skills</h4>
             </div>
 
-            <div className="mask-gradient-x overflow-hidden py-1.5 space-y-3">
+            <div className="mask-gradient-x overflow-hidden pt-8 sm:pt-9 pb-2.5 space-y-6 sm:space-y-7">
               {/* Row 1: Leftward continuous rotating marquee */}
-              <div className="animate-marquee gap-3 sm:gap-4 items-center">
-                {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, idx) => (
+              <div className="animate-marquee gap-5 sm:gap-6 items-center">
+                {[...row1Skills, ...row1Skills].map((skill, idx) => (
                   <div
                     key={`row1-${skill.name}-${idx}`}
-                    title={skill.name}
-                    className="p-1 hover:scale-110 transition-transform duration-150 select-none cursor-pointer"
+                    className="relative group/skill flex flex-col items-center justify-center p-1 cursor-pointer select-none z-10 hover:z-40"
                   >
-                    {skill.icon}
+                    {/* Hover Popup Tooltip matching screenshot */}
+                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 scale-90 group-hover/skill:opacity-100 group-hover/skill:scale-100 transition-all duration-150 ease-out pointer-events-none flex flex-col items-center">
+                      <div className="bg-white text-zinc-950 font-sans font-medium text-[11px] sm:text-xs px-2.5 py-0.5 rounded shadow-md whitespace-nowrap leading-tight">
+                        {skill.name}
+                      </div>
+                      <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-white -mt-[0.5px]" />
+                    </div>
+
+                    {/* Logo Icon */}
+                    <div className="text-zinc-100 transition-transform duration-150 group-hover/skill:scale-110">
+                      {skill.icon}
+                    </div>
                   </div>
                 ))}
               </div>
 
               {/* Row 2: Rightward reverse continuous rotating marquee */}
-              <div className="animate-marquee-reverse gap-3 sm:gap-4 items-center">
-                {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, idx) => (
+              <div className="animate-marquee-reverse gap-5 sm:gap-6 items-center">
+                {[...row2Skills, ...row2Skills].map((skill, idx) => (
                   <div
                     key={`row2-${skill.name}-${idx}`}
-                    title={skill.name}
-                    className="p-1 hover:scale-110 transition-transform duration-150 select-none cursor-pointer"
+                    className="relative group/skill flex flex-col items-center justify-center p-1 cursor-pointer select-none z-10 hover:z-40"
                   >
-                    {skill.icon}
+                    {/* Hover Popup Tooltip matching screenshot */}
+                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 scale-90 group-hover/skill:opacity-100 group-hover/skill:scale-100 transition-all duration-150 ease-out pointer-events-none flex flex-col items-center">
+                      <div className="bg-white text-zinc-950 font-sans font-medium text-[11px] sm:text-xs px-2.5 py-0.5 rounded shadow-md whitespace-nowrap leading-tight">
+                        {skill.name}
+                      </div>
+                      <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-white -mt-[0.5px]" />
+                    </div>
+
+                    {/* Logo Icon */}
+                    <div className="text-zinc-100 transition-transform duration-150 group-hover/skill:scale-110">
+                      {skill.icon}
+                    </div>
                   </div>
                 ))}
               </div>
