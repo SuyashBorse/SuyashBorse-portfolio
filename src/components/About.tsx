@@ -315,18 +315,11 @@ export default function About() {
               </span>
             </div>
 
-            <div className="grow flex flex-col justify-center items-center text-center p-3 sm:p-5 my-auto">
-              <span className="text-3xl text-zinc-700 font-serif leading-none select-none mb-1">“</span>
+            <div className="grow flex flex-col justify-center items-center text-center p-4 sm:p-6 my-auto">
+              <span className="text-3xl text-zinc-700 font-serif leading-none select-none mb-2">“</span>
               <blockquote className="font-serif text-lg sm:text-xl text-zinc-100 leading-snug tracking-normal max-w-md">
                 Write code to be read, learn to expand my mind, but build to solve the problem.
               </blockquote>
-              <div className="mt-4 flex items-center gap-2">
-                <div className="w-6 h-px bg-cyan-500/50" />
-                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
-                  Suyash Borse
-                </figcaption>
-                <div className="w-6 h-px bg-cyan-500/50" />
-              </div>
             </div>
           </div>
 
