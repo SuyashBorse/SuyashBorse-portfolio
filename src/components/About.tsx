@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { animate, useInView } from "framer-motion";
-import { MapPin, Cake, Link2, Code2, Quote, User } from "lucide-react";
+import { MapPin, Cake, Link2, Code2, User } from "lucide-react";
 import Globe, { type GlobeHandle } from "@/components/Globe";
+import GitHubActivityCard from "@/components/GitHubActivityCard";
 import {
   GithubIcon,
   LinkedinIcon,
@@ -301,46 +302,9 @@ export default function About() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Favorite Quotes (Spanning Full Height) */}
+        {/* RIGHT COLUMN: Live GitHub Heatmap & Activity Card (Spanning Full Height) */}
         <div className="w-full md:w-1/2 flex">
-          <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-4 sm:p-5 drop-shadow-sm flex flex-col justify-between w-full hover:border-zinc-700 transition-colors">
-            <div className="flex items-center space-x-2 text-sm font-medium text-zinc-300 mb-2">
-              <Quote className="w-4 h-4 text-zinc-400" />
-              <h4 className="truncate font-medium text-white">Favorite Quotes</h4>
-            </div>
-
-            <div className="grow flex flex-col justify-between divide-y divide-zinc-800/80 my-2">
-              {/* Quote 1 */}
-              <figure className="flex flex-1 flex-col justify-center gap-3 px-3 py-6 sm:py-8 text-center first:pt-2">
-                <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-zinc-100 leading-snug tracking-normal">
-                  “If you can&#39;t explain it simply, you don&#39;t understand it well enough.”
-                </blockquote>
-                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
-                  — Albert Einstein
-                </figcaption>
-              </figure>
-
-              {/* Quote 2 */}
-              <figure className="flex flex-1 flex-col justify-center gap-3 px-3 py-6 sm:py-8 text-center">
-                <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-zinc-100 leading-snug tracking-normal">
-                  “It&#39;s not about how hard you row, it&#39;s about what boat you&#39;re in.”
-                </blockquote>
-                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
-                  — Warren Buffet
-                </figcaption>
-              </figure>
-
-              {/* Quote 3 */}
-              <figure className="flex flex-1 flex-col justify-center gap-3 px-3 py-6 sm:py-8 text-center last:pb-2">
-                <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-zinc-100 leading-snug tracking-normal">
-                  “Be yourself; everyone else is already taken.”
-                </blockquote>
-                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
-                  — Oscar Wilde
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+          <GitHubActivityCard />
         </div>
       </div>
     </section>

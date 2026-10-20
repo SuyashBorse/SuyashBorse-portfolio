@@ -104,8 +104,8 @@ export default function CustomCursor() {
           translateY: "-50%",
         }}
         animate={{
-          width: isHovered ? (cursorText ? 76 : 56) : 34,
-          height: isHovered ? (cursorText ? 76 : 56) : 34,
+          width: isHovered ? (cursorText ? 64 : 42) : 34,
+          height: isHovered ? (cursorText ? 64 : 42) : 34,
           scale: isClicked ? 0.78 : 1,
           backgroundColor: isHovered
             ? "rgba(6, 182, 212, 0.14)"
