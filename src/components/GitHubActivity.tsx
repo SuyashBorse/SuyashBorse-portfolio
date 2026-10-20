@@ -29,6 +29,7 @@ export default function GitHubActivity() {
   } | null>(null);
 
   const scrollRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const fetchContributions = async () => {
     setIsLoading(true);
@@ -255,13 +256,13 @@ export default function GitHubActivity() {
             ref={scrollRef}
             className="overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-zinc-800 select-none"
           >
-            <div className="min-w-[760px] flex flex-col gap-1.5 py-1">
+            <div ref={gridRef} className="min-w-[780px] flex flex-col gap-1.5 pt-7 pb-1 pr-16 pl-1 relative">
               {/* Month Labels Row */}
               <div className="flex text-[10px] font-mono text-zinc-500 pl-7 h-4 relative">
                 {monthLabels.map((m, idx) => (
                   <span
                     key={`${m.label}-${idx}`}
-                    style={{ left: `${m.colIndex * 14.2}px` }}
+                    style={{ left: `${m.colIndex * 14}px` }}
                     className="absolute"
                   >
                     {m.label}
@@ -314,11 +315,13 @@ export default function GitHubActivity() {
                             <div
                               key={day.date}
                               onMouseEnter={(e) => {
-                                const rect = e.currentTarget.getBoundingClientRect();
+                                if (!gridRef.current) return;
+                                const cellRect = e.currentTarget.getBoundingClientRect();
+                                const gridRect = gridRef.current.getBoundingClientRect();
                                 setHoveredDay({
                                   day,
-                                  x: rect.left + rect.width / 2,
-                                  y: rect.top,
+                                  x: cellRect.left - gridRect.left + cellRect.width / 2,
+                                  y: cellRect.top - gridRect.top,
                                 });
                               }}
                               onMouseLeave={() => setHoveredDay(null)}
@@ -333,33 +336,33 @@ export default function GitHubActivity() {
                   </div>
                 )}
               </div>
+
+              {/* Floating Hover Tooltip: Exactly centered and anchored right above the hovered cell */}
+              {hoveredDay && (
+                <div
+                  style={{
+                    position: "absolute",
+                    left: `${hoveredDay.x}px`,
+                    top: `${hoveredDay.y - 6}px`,
+                    transform: "translate(-50%, -100%)",
+                  }}
+                  className="pointer-events-none z-50 flex flex-col items-center animate-in fade-in duration-100"
+                >
+                  <div className="bg-white text-zinc-950 font-sans font-medium text-[11px] px-2.5 py-1 rounded shadow-xl whitespace-nowrap leading-tight">
+                    <span className="font-semibold">
+                      {hoveredDay.day.count === 0
+                        ? "No contributions"
+                        : `${hoveredDay.day.count} contribution${
+                            hoveredDay.day.count > 1 ? "s" : ""
+                          }`}
+                    </span>{" "}
+                    <span className="text-zinc-600">on {formatDate(hoveredDay.day.date)}</span>
+                  </div>
+                  <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-white -mt-[0.5px]" />
+                </div>
+              )}
             </div>
           </div>
-
-          {/* Floating Hover Tooltip matching custom marquee tooltip style */}
-          {hoveredDay && (
-            <div
-              style={{
-                position: "fixed",
-                left: `${hoveredDay.x}px`,
-                top: `${hoveredDay.y - 10}px`,
-                transform: "translate(-50%, -100%)",
-              }}
-              className="pointer-events-none z-50 flex flex-col items-center animate-in fade-in zoom-in-95 duration-100"
-            >
-              <div className="bg-white text-zinc-950 font-sans font-medium text-[11px] px-2.5 py-1 rounded shadow-xl whitespace-nowrap leading-tight">
-                <span className="font-semibold">
-                  {hoveredDay.day.count === 0
-                    ? "No contributions"
-                    : `${hoveredDay.day.count} contribution${
-                        hoveredDay.day.count > 1 ? "s" : ""
-                      }`}
-                </span>{" "}
-                <span className="text-zinc-600">on {formatDate(hoveredDay.day.date)}</span>
-              </div>
-              <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-white -mt-[0.5px]" />
-            </div>
-          )}
         </div>
 
         {/* Heatmap Footer: Legend & Refresh Info */}
