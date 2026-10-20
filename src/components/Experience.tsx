@@ -17,18 +17,18 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Full-Stack Developer & Backend Engineer",
-    organization: "Academic Projects & Independent Development",
+    role: "Open Source & Project Developer",
+    organization: "GitHub Repositories (@SuyashBorse)",
     location: "Shirpur, Maharashtra",
     period: "2024 — Present",
-    badge: "Current Focus",
+    badge: "10+ Repositories",
     badgeColor: "bg-cyan-950/50 text-cyan-400 border-cyan-800/40",
     points: [
-      "Architecting and developing scalable full-stack applications with Spring Boot, Next.js, TypeScript, and modern relational & cloud databases.",
-      "Designing clean RESTful microservices with Spring Security, robust CRUD operations, and database integrations (PostgreSQL, MySQL, Supabase).",
-      "Crafting performant, accessible UI interfaces using Tailwind CSS and Framer Motion, focusing on responsive design and seamless interaction.",
+      "Engineered EcoTrack, an intelligent carbon footprint tracker featuring Supabase PostgreSQL 17 with RLS, Google Gemini AI sustainability coaching, and Chart.js analytics.",
+      "Developed VILP (Verified Internship Lifecycle Platform) integrating Spring Boot background tasks, PostgreSQL data modeling, and role-based access control.",
+      "Built responsive, accessible web tools like Currency Converter using modern JavaScript (ES6+), async/await Fetch API integration, and dynamic DOM manipulation.",
     ],
-    skills: ["Java", "Spring Boot", "Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    skills: ["JavaScript", "Spring Boot", "Supabase", "PostgreSQL", "Next.js", "Chart.js", "Git"],
   },
   {
     role: "Hackathon Competitor & Technical Lead",
