@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
-import GitHubActivity from "@/components/GitHubActivity";
 import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
@@ -20,13 +19,10 @@ export default function Home() {
       {/* 3. Skills Section — Categorical Inventory */}
       <Skills />
 
-      {/* 4. GitHub Activity — Live Dynamic Heatmap & Streaks */}
-      <GitHubActivity />
-
-      {/* 5. Projects Showcase — Visual 2x2 Showcase */}
+      {/* 4. Projects Showcase — Visual 2x2 Showcase */}
       <Projects />
 
-      {/* 6. Contact Section — Message Form */}
+      {/* 5. Contact Section — Message Form */}
       <ContactForm />
     </div>
   );
