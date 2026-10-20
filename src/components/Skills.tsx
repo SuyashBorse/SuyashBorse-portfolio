@@ -54,7 +54,7 @@ export default function Skills() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {skillCategories.map((cat, idx) => (
           <motion.div
             key={cat.title}
@@ -62,29 +62,29 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: idx * 0.08 }}
-            className="glass-card rounded-xl p-4 flex flex-col justify-between"
+            className="glass-card rounded-xl p-6 sm:p-7 flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="p-1.5 rounded-md bg-white/[0.04] backdrop-blur-md border border-white/10">
+              <div className="flex items-center gap-2.5 mb-5">
+                <div className="p-2 rounded-lg bg-white/[0.06] backdrop-blur-md border border-white/10">
                   {cat.icon}
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white tracking-tight">
+                  <h4 className="text-base font-semibold text-white tracking-tight">
                     {cat.title}
                   </h4>
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase block">
+                  <span className="text-[11px] font-mono text-zinc-400 uppercase block">
                     {cat.category}
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06] mt-2">
+            <div className="flex flex-wrap gap-2 pt-4 border-t border-white/[0.06] mt-3">
               {cat.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-2 py-0.5 rounded text-[11px] font-mono bg-white/[0.04] backdrop-blur-md text-zinc-200 border border-white/[0.08]"
+                  className="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.05] backdrop-blur-md text-zinc-200 border border-white/[0.08]"
                 >
                   {skill}
                 </span>
