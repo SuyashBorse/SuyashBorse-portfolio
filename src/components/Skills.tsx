@@ -48,7 +48,7 @@ const skillCategories: SkillCategory[] = [
     icon: <Cpu className="w-4 h-4 text-emerald-400" />,
     skills: [
       "Data Structures & Algos",
-      "Object-Oriented Design",
+      "Object-Oriented Programming",
       "DBMS",
       "Operating Systems",
       "Computer Networks",
