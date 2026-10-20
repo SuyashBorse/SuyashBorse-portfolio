@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { animate, useInView } from "framer-motion";
-import { MapPin, Cake, Link2, Code2, User } from "lucide-react";
+import { MapPin, Cake, Link2, Code2, Quote, User, Lightbulb, Target } from "lucide-react";
 import Globe, { type GlobeHandle } from "@/components/Globe";
-import GitHubActivityCard from "@/components/GitHubActivityCard";
 import {
   GithubIcon,
   LinkedinIcon,
@@ -302,9 +301,94 @@ export default function About() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Live GitHub Heatmap & Activity Card (Spanning Full Height) */}
-        <div className="w-full md:w-1/2 flex">
-          <GitHubActivityCard />
+        {/* RIGHT COLUMN: Divided into 2 Cards: 1) Engineering Philosophy & 2) Current Focus / What I'm Learning */}
+        <div className="w-full md:w-1/2 flex flex-col gap-5">
+          {/* Card 1: Engineering Philosophy */}
+          <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-4 sm:p-5 drop-shadow-sm flex flex-col justify-between flex-1 hover:border-zinc-700 transition-colors">
+            <div className="flex items-center justify-between text-sm font-medium text-zinc-300 mb-2">
+              <div className="flex items-center space-x-2">
+                <Lightbulb className="w-4 h-4 text-amber-400" />
+                <h4 className="truncate font-medium text-white">Engineering Philosophy</h4>
+              </div>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded">
+                Motto
+              </span>
+            </div>
+
+            <div className="grow flex flex-col justify-center items-center text-center p-3 sm:p-5 my-auto">
+              <span className="text-3xl text-zinc-700 font-serif leading-none select-none mb-1">“</span>
+              <blockquote className="font-serif text-lg sm:text-xl text-zinc-100 leading-snug tracking-normal max-w-md">
+                Write code to be read, learn to expand my mind, but build to solve the problem.
+              </blockquote>
+              <div className="mt-4 flex items-center gap-2">
+                <div className="w-6 h-px bg-cyan-500/50" />
+                <figcaption className="text-zinc-400 text-xs sm:text-sm font-sans tracking-tight">
+                  Suyash Borse
+                </figcaption>
+                <div className="w-6 h-px bg-cyan-500/50" />
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Current Focus / What I'm Learning */}
+          <div className="border border-zinc-800 bg-[#09090b] rounded-lg p-4 sm:p-5 drop-shadow-sm flex flex-col justify-between flex-1 hover:border-zinc-700 transition-colors">
+            <div className="flex items-center justify-between text-sm font-medium text-zinc-300 mb-3">
+              <div className="flex items-center space-x-2">
+                <Target className="w-4 h-4 text-cyan-400" />
+                <h4 className="truncate font-medium text-white">Current Focus &amp; Learning</h4>
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-800/40 px-2 py-0.5 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Active
+              </span>
+            </div>
+
+            <div className="grow flex flex-col justify-center gap-2.5 my-auto">
+              {/* Focus Item 1 */}
+              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
+                <div className="flex flex-col">
+                  <span className="text-sm font-medium text-zinc-100">DSA in Java</span>
+                  <span className="text-[11px] font-mono text-zinc-400">LeetCode, CodeChef &amp; Algorithmic Problem Solving</span>
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/50 text-cyan-300 border border-cyan-800/40">
+                  Daily Practice
+                </span>
+              </div>
+
+              {/* Focus Item 2 */}
+              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
+                <div className="flex flex-col">
+                  <span className="text-sm font-medium text-zinc-100">Spring Boot &amp; Backend</span>
+                  <span className="text-[11px] font-mono text-zinc-400">RESTful APIs, Spring Security &amp; Microservices</span>
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/50 text-emerald-300 border border-emerald-800/40">
+                  Deep Dive
+                </span>
+              </div>
+
+              {/* Focus Item 3 */}
+              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
+                <div className="flex flex-col">
+                  <span className="text-sm font-medium text-zinc-100">System Design &amp; Architecture</span>
+                  <span className="text-[11px] font-mono text-zinc-400">Database Indexing, Caching &amp; Scalability</span>
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-950/50 text-indigo-300 border border-indigo-800/40">
+                  Exploring
+                </span>
+              </div>
+
+              {/* Focus Item 4 */}
+              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
+                <div className="flex flex-col">
+                  <span className="text-sm font-medium text-zinc-100">Full-Stack Engineering</span>
+                  <span className="text-[11px] font-mono text-zinc-400">Next.js, TypeScript &amp; Cloud Databases</span>
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950/50 text-purple-300 border border-purple-800/40">
+                  Building
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
