@@ -343,9 +343,9 @@ export default function About() {
               </span>
             </div>
 
-            <div className="grow flex flex-col justify-center gap-2.5 my-auto">
+            <div className="grow flex flex-col justify-center gap-3 my-auto">
               {/* Focus Item 1 */}
-              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
+              <div className="flex items-center justify-between p-3 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
                 <div className="flex flex-col">
                   <span className="text-sm font-medium text-zinc-100">DSA in Java</span>
                   <span className="text-[11px] font-mono text-zinc-400">LeetCode, CodeChef &amp; Algorithmic Problem Solving</span>
@@ -356,7 +356,7 @@ export default function About() {
               </div>
 
               {/* Focus Item 2 */}
-              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
+              <div className="flex items-center justify-between p-3 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
                 <div className="flex flex-col">
                   <span className="text-sm font-medium text-zinc-100">Spring Boot &amp; Backend</span>
                   <span className="text-[11px] font-mono text-zinc-400">RESTful APIs, Spring Security &amp; Microservices</span>
@@ -367,24 +367,13 @@ export default function About() {
               </div>
 
               {/* Focus Item 3 */}
-              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
+              <div className="flex items-center justify-between p-3 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
                 <div className="flex flex-col">
                   <span className="text-sm font-medium text-zinc-100">System Design &amp; Architecture</span>
                   <span className="text-[11px] font-mono text-zinc-400">Database Indexing, Caching &amp; Scalability</span>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-950/50 text-indigo-300 border border-indigo-800/40">
                   Exploring
-                </span>
-              </div>
-
-              {/* Focus Item 4 */}
-              <div className="flex items-center justify-between p-2.5 rounded-md bg-zinc-900/60 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors">
-                <div className="flex flex-col">
-                  <span className="text-sm font-medium text-zinc-100">Full-Stack Engineering</span>
-                  <span className="text-[11px] font-mono text-zinc-400">Next.js, TypeScript &amp; Cloud Databases</span>
-                </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950/50 text-purple-300 border border-purple-800/40">
-                  Building
                 </span>
               </div>
             </div>
