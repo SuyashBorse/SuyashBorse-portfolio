@@ -200,12 +200,12 @@ export default function AchievementsAndActivity() {
               Problems Solved on CodeChef
             </h4>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              Mastered foundational to advanced Data Structures &amp; Algorithms in Java including Dynamic Programming, Graphs, and Trees.
+              Mastered foundational problem solving in Java focusing on Arrays, Strings, ArrayList, Stack, and Queue implementations.
             </p>
           </div>
           <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-500">
-            <span>DSA in Java</span>
-            <span className="text-orange-400 font-medium">Daily Consistency</span>
+            <span>Arrays, Strings &amp; Stacks</span>
+            <span className="text-orange-400 font-medium">Daily Practice</span>
           </div>
         </motion.div>
 
@@ -233,11 +233,11 @@ export default function AchievementsAndActivity() {
               GitHub Repositories
             </h4>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              Built and published full-stack web applications, backend microservices, real-time utilities, and collaborative repositories.
+              Collaborated with team members to build and publish full-stack web applications, backend services, and utilities across 10+ public repositories.
             </p>
           </div>
           <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-500">
-            <span>Active Contributor</span>
+            <span>Collaborative Contributor</span>
             <a
               href="https://github.com/SuyashBorse"
               target="_blank"
@@ -274,11 +274,11 @@ export default function AchievementsAndActivity() {
               SIH &apos;26 Internal Round
             </h4>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              Qualified through the competitive Smart India Hackathon 2026 college internal round with an end-to-end working software prototype.
+              Qualified through the competitive Smart India Hackathon 2026 college internal round with Team PARSU, contributing to literature research, Simulink modeling, and presentation.
             </p>
           </div>
           <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-500">
-            <span>Team Lead &amp; Architect</span>
+            <span>Research &amp; Presentation · Team PARSU</span>
             <span className="text-emerald-400 font-medium">Smart India Hackathon</span>
           </div>
         </motion.div>
