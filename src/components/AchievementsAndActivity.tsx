@@ -233,11 +233,11 @@ export default function AchievementsAndActivity() {
               GitHub Repositories
             </h4>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              Collaborated with team members to build and publish full-stack web applications, backend services, and utilities across 10+ public repositories.
+              Engineered independent web applications like EcoTrack and Currency Converter, alongside collaborative full-stack projects across 10+ public repositories.
             </p>
           </div>
           <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-500">
-            <span>Collaborative Contributor</span>
+            <span>Independent &amp; Team Projects</span>
             <a
               href="https://github.com/SuyashBorse"
               target="_blank"

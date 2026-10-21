@@ -17,18 +17,18 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Project Developer & Team Contributor",
-    organization: "Collaborative Team & Open-Source Projects (@SuyashBorse)",
+    role: "Project Developer & Builder",
+    organization: "Personal & Collaborative Projects (@SuyashBorse)",
     location: "Shirpur, Maharashtra",
     period: "2024 — Present",
     badge: "10+ Repositories",
     badgeColor: "bg-cyan-950/50 text-cyan-400 border-cyan-800/40",
     points: [
-      "Collaborated with the team to build EcoTrack, an intelligent carbon footprint tracker featuring Supabase PostgreSQL 17 with RLS, Google Gemini AI sustainability coaching, and Chart.js analytics.",
-      "Worked with team members to engineer VILP (Verified Internship Lifecycle Platform) integrating Spring Boot backend routines, PostgreSQL data modeling, and role-based access control.",
-      "Collaboratively developed responsive, accessible web tools like Currency Converter using modern JavaScript (ES6+), async/await Fetch API integration, and dynamic DOM manipulation.",
+      "Independently designed and developed EcoTrack, an intelligent personal carbon footprint tracker featuring Supabase PostgreSQL 17 with RLS, Google Gemini AI sustainability coaching, and Chart.js analytics.",
+      "Collaborated with team members to engineer VILP (Verified Internship Lifecycle Platform) integrating Spring Boot backend routines, PostgreSQL data modeling, and role-based access control.",
+      "Independently built Currency Converter, a real-time foreign exchange web application using modern JavaScript (ES6+), async/await Fetch API integration, and dynamic DOM manipulation.",
     ],
-    skills: ["Team Collaboration", "JavaScript", "Spring Boot", "Supabase", "PostgreSQL", "Next.js", "Git"],
+    skills: ["JavaScript", "Spring Boot", "Supabase", "PostgreSQL", "Next.js", "Chart.js", "Team Collaboration"],
   },
   {
     role: "Hackathon Researcher & Team Collaborator",
