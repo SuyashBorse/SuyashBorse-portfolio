@@ -205,7 +205,15 @@ export default function AchievementsAndActivity() {
           </div>
           <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-500">
             <span>Arrays, Strings &amp; Stacks</span>
-            <span className="text-orange-400 font-medium">Daily Practice</span>
+            <a
+              href="https://www.codechef.com/users/rcpit251109101"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-400 hover:text-orange-300 transition-colors inline-flex items-center gap-1 font-medium"
+            >
+              <span>rcpit251109101</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
         </motion.div>
 

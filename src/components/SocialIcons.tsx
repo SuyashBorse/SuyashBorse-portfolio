@@ -48,22 +48,16 @@ export function LinkedinIcon({ className = "w-4 h-4" }: { className?: string }) 
 
 export function CodeChefIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5z" />
-      <path d="M9 14h6" />
-      <path d="M12 11v6" />
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.197 0c-.39 0-.77.08-1.12.22l-8.58 3.56c-.8.33-1.32 1.11-1.32 1.98v11.48c0 .87.52 1.65 1.32 1.98l8.58 3.56c.35.14.73.22 1.12.22s.77-.08 1.12-.22l8.58-3.56c.8-.33 1.32-1.11 1.32-1.98V5.76c0-.87-.52-1.65-1.32-1.98l-8.58-3.56c-.35-.14-.73-.22-1.12-.22zm-.2 2.3 7.02 2.91-7.02 2.91-7.02-2.91 7.02-2.91zm-7.9 4.79 6.9 2.86v7.35l-6.9-2.86V7.09zm8.9 10.21v-7.35l6.9-2.86v7.35l-6.9 2.86z" />
     </svg>
   );
 }
 
 export function LeetCodeIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="m16 8-8 8" />
-      <path d="M12 4v4" />
-      <path d="M12 16v4" />
-      <path d="M4 12h4" />
-      <path d="M16 12h4" />
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .666-1.607c.06-.067.13-.127.18-.198l3.643-3.9 4.371-4.686a1.374 1.374 0 0 0-.003-1.952A1.37 1.37 0 0 0 13.483 0zm-2.88 7.218a1.377 1.377 0 0 0-.97.404l-4.7 4.7a1.38 1.38 0 1 0 1.95 1.952l4.7-4.7a1.38 1.38 0 0 0-.98-2.356z" />
     </svg>
   );
 }

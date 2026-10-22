@@ -12,22 +12,22 @@ export const socialLinksData: SocialLink[] = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/suyash-borse",
+    url: "https://www.linkedin.com/in/suyashborse/",
     iconName: "linkedin",
+  },
+  {
+    name: "CodeChef",
+    url: "https://www.codechef.com/users/rcpit251109101",
+    iconName: "codechef",
+  },
+  {
+    name: "LeetCode",
+    url: "https://leetcode.com/u/Suyashborse/",
+    iconName: "leetcode",
   },
   {
     name: "Email",
     url: "mailto:suyash.a.borse@gmail.com",
     iconName: "email",
-  },
-  {
-    name: "CodeChef",
-    url: undefined, // To be filled by Suyash
-    iconName: "codechef",
-  },
-  {
-    name: "LeetCode",
-    url: undefined, // To be filled by Suyash
-    iconName: "leetcode",
   },
 ];

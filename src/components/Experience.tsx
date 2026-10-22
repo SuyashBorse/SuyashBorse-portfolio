@@ -1,8 +1,13 @@
 "use client";
 
 import React from "react";
-import { Briefcase, Calendar, MapPin, Award, CheckCircle2 } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Award, CheckCircle2, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+
+interface ExperienceLink {
+  label: string;
+  url: string;
+}
 
 interface ExperienceItem {
   role: string;
@@ -13,6 +18,7 @@ interface ExperienceItem {
   badgeColor?: string;
   points: string[];
   skills: string[];
+  links?: ExperienceLink[];
 }
 
 const experiences: ExperienceItem[] = [
@@ -29,6 +35,9 @@ const experiences: ExperienceItem[] = [
       "Independently built Currency Converter, a real-time foreign exchange web application using modern JavaScript (ES6+), async/await Fetch API integration, and dynamic DOM manipulation.",
     ],
     skills: ["JavaScript", "Spring Boot", "Supabase", "PostgreSQL", "Next.js", "Chart.js", "Team Collaboration"],
+    links: [
+      { label: "GitHub @SuyashBorse", url: "https://github.com/SuyashBorse" },
+    ],
   },
   {
     role: "Hackathon Researcher & Team Collaborator",
@@ -43,6 +52,9 @@ const experiences: ExperienceItem[] = [
       "Collaborated with teammates to co-present the working prototype and findings to the faculty judging panel, successfully clearing the college internal screening round.",
     ],
     skills: ["Literature Research", "Simulink & MATLAB", "Team Collaboration", "Technical Presentation", "Testing & QA"],
+    links: [
+      { label: "SIH '26 VisionRaksha Repo", url: "https://github.com/SuyashBorse/Vision_raksha-SIH26-" },
+    ],
   },
   {
     role: "DSA Practitioner & Problem Solver",
@@ -57,6 +69,10 @@ const experiences: ExperienceItem[] = [
       "Practicing structured Java code daily to build intuitive problem-solving logic and master fundamental computer science concepts.",
     ],
     skills: ["Java", "Arrays", "Strings", "ArrayList", "Stack", "Queue", "CodeChef", "LeetCode"],
+    links: [
+      { label: "CodeChef Profile", url: "https://www.codechef.com/users/rcpit251109101" },
+      { label: "LeetCode Profile", url: "https://leetcode.com/u/Suyashborse/" },
+    ],
   },
 ];
 
@@ -155,6 +171,24 @@ export default function Experience() {
                   </span>
                 ))}
               </div>
+
+              {/* Verified Links */}
+              {exp.links && exp.links.length > 0 && (
+                <div className="flex flex-wrap items-center gap-3 pt-3 mt-3 border-t border-zinc-800/60 text-xs font-mono">
+                  {exp.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors hover:underline decoration-dotted"
+                    >
+                      <span>{link.label}</span>
+                      <ExternalLink className="w-3 h-3 text-zinc-500" />
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </motion.div>
         ))}

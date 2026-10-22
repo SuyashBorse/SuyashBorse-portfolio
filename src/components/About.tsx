@@ -7,6 +7,8 @@ import Globe, { type GlobeHandle } from "@/components/Globe";
 import {
   GithubIcon,
   LinkedinIcon,
+  CodeChefIcon,
+  LeetCodeIcon,
 } from "@/components/SocialIcons";
 import {
   HtmlLogo,
@@ -210,7 +212,7 @@ export default function About() {
                 <h4 className="truncate font-medium text-white">Socials</h4>
               </div>
               <div className="grow flex items-center justify-center py-2 sm:py-3">
-                <div className="flex flex-col gap-3 w-full max-w-[130px]">
+                <div className="flex flex-col gap-2.5 w-full max-w-[140px]">
                   <a
                     href="https://github.com/SuyashBorse"
                     target="_blank"
@@ -221,13 +223,31 @@ export default function About() {
                     <span>GitHub</span>
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/suyash-borse"
+                    href="https://www.linkedin.com/in/suyashborse/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2.5 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
                   >
                     <LinkedinIcon className="w-4 h-4 shrink-0" />
                     <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://www.codechef.com/users/rcpit251109101"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2.5 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                  >
+                    <CodeChefIcon className="w-4 h-4 shrink-0" />
+                    <span>CodeChef</span>
+                  </a>
+                  <a
+                    href="https://leetcode.com/u/Suyashborse/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2.5 text-zinc-300 hover:text-white hover:underline decoration-dotted transition-colors text-xs sm:text-sm"
+                  >
+                    <LeetCodeIcon className="w-4 h-4 shrink-0" />
+                    <span>LeetCode</span>
                   </a>
                   <a
                     href="mailto:suyash.a.borse@gmail.com"
