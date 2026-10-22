@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail } from "lucide-react";
 import { socialLinksData } from "@/data/socialLinks";
 import { GithubIcon, LinkedinIcon, CodeChefIcon, LeetCodeIcon } from "@/components/SocialIcons";
 
@@ -20,6 +20,8 @@ export default function Footer() {
         return <CodeChefIcon className="w-3.5 h-3.5" />;
       case "leetcode":
         return <LeetCodeIcon className="w-3.5 h-3.5" />;
+      case "email":
+        return <Mail className="w-3.5 h-3.5" />;
       default:
         return null;
     }
