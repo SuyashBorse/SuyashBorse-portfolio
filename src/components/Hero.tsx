@@ -27,7 +27,7 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="text-zinc-500 text-lg sm:text-2xl md:text-3xl font-bold tracking-wider uppercase text-center mt-3 sm:mt-5"
       >
-        SOFTWARE ENGINEER
+        SOFTWARE DEVELOPER
       </motion.h2>
     </section>
   );
