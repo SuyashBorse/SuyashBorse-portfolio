@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Preloader from "@/components/Preloader";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
@@ -35,9 +34,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body className="antialiased bg-[#09090b] text-zinc-100 min-h-screen selection:bg-zinc-800 selection:text-white relative overflow-x-hidden">
-        {/* Page Load / Buffering Preloader */}
-        <Preloader />
-
         {/* Global Interactive Custom Cursor */}
         <CustomCursor />
 
