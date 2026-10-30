@@ -84,9 +84,8 @@ export default function Footer() {
           </button>
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-zinc-500 gap-3">
+        <div className="pt-6 flex items-center justify-center sm:justify-start text-xs font-mono text-zinc-500">
           <p>© {new Date().getFullYear()} Suyash Borse. All rights reserved.</p>
-          <p>Built with Next.js, Tailwind CSS &amp; Framer Motion</p>
         </div>
       </div>
     </footer>
