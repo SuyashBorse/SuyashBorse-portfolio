@@ -5,15 +5,15 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "Suyash Anil Borse | Developer Portfolio",
-  description: "Portfolio of Suyash Anil Borse — Java Developer, Web Engineer, and Algorithmic Problem Solver. Student at R. C. Patel Institute of Technology.",
-  keywords: ["Suyash Anil Borse", "Java Developer", "Web Engineer", "Portfolio", "Data Structures", "Algorithms", "Next.js", "React", "CodeChef", "LeetCode"],
-  authors: [{ name: "Suyash Anil Borse" }],
+  title: "Suyash Borse | Developer Portfolio",
+  description: "Portfolio of Suyash Borse — Java Developer, Web Engineer, and Algorithmic Problem Solver. Student at R. C. Patel Institute of Technology.",
+  keywords: ["Suyash Borse", "Java Developer", "Web Engineer", "Portfolio", "Data Structures", "Algorithms", "Next.js", "React", "CodeChef", "LeetCode"],
+  authors: [{ name: "Suyash Borse" }],
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Suyash Anil Borse | Developer Portfolio",
+    title: "Suyash Borse | Developer Portfolio",
     description: "Java Developer | Web Engineer | Algorithmic Problem Solver",
     type: "website",
     locale: "en_US",
