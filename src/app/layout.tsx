@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   keywords: ["Suyash Borse", "Java Developer", "Web Engineer", "Portfolio", "Data Structures", "Algorithms", "Next.js", "React", "CodeChef", "LeetCode"],
   authors: [{ name: "Suyash Borse" }],
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     title: "Suyash Borse | Developer Portfolio",
