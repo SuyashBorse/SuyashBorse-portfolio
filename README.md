@@ -1,8 +1,45 @@
-# Suyash Anil Borse — Developer Portfolio
+# Suyash Borse — Developer Portfolio
 
-A responsive, and production-ready personal developer portfolio built for **Suyash Anil Borse** (Java Developer | Web Engineer | Algorithmic Problem Solver).
+A responsive, production-ready developer portfolio built for **Suyash Borse** (Software Developer · Java & Full-Stack Web Engineer).
 
-Designed with a deep-space theme, sticky glassmorphic navigation, accessible micro-interactions, responsive Bento-box skills grid, and interactive project cards.
+Designed with a sleek deep-space dark aesthetic, sticky glassmorphic navigation, accessible micro-interactions, an interactive 3D WebGL globe, dynamic project deep-dive pages, and a categorized skills inventory.
+
+---
+
+## Live Profiles
+
+| Platform | Handle / Profile | Focus |
+| :--- | :--- | :--- |
+| **GitHub** | [@SuyashBorse](https://github.com/SuyashBorse) | 10+ Public repositories & collaborative open-source |
+| **LinkedIn** | [in/suyashborse](https://www.linkedin.com/in/suyashborse/) | Professional networking & updates |
+| **CodeChef** | [rcpit251109101](https://www.codechef.com/users/rcpit251109101) | 1,000+ Problems Solved (Arrays, Strings, Stacks, Queues) |
+| **LeetCode** | [Suyashborse](https://leetcode.com/u/Suyashborse/) | Algorithmic problem solving in Java |
+| **Email** | [suyash.a.borse@gmail.com](mailto:suyash.a.borse@gmail.com) | Direct communication & opportunities |
+
+---
+
+## Featured Projects
+
+1. **[EcoTrack (Intelligent Carbon Tracker)](https://ecotrack-app-peach.vercel.app/)**
+   - Personal greenhouse gas emissions tracker built strictly on IPCC/GHG Protocol coefficients.
+   - Stack: Supabase PostgreSQL 17 with RLS, Google Gemini AI sustainability coach, Chart.js multi-period analytics, and canvas celebrations.
+   - [GitHub Repository](https://github.com/SuyashBorse/Intelligent-Sustainability-Assistant-and-Carbon-Tracker)
+
+2. **[Currency Converter](https://currency-converter-orpin-eight.vercel.app/)**
+   - Real-time foreign exchange rates tool built with modern vanilla JavaScript (ES6+), HTML5, and CSS3.
+   - Demonstrates async/await, Fetch API JSON response streams, dynamic DOM manipulation, and national flag CDN bindings.
+   - [GitHub Repository](https://github.com/SuyashBorse/Currency-Converter)
+
+3. **[RetinAI (VisionRaksha) — SIH '26](https://vision-raksha-sih-26.vercel.app/)**
+   - Explainable AI telemedicine screening pipeline for Diabetic Retinopathy engineered for Smart India Hackathon 2026 (MathWorks PS SIH26038).
+   - Qualified through college internal evaluation with Team PARSU.
+   - Stack: MATLAB, Simulink logistics simulation, Python, PyTorch, React 19, FastAPI, Grad-CAM clinical explainability.
+   - [GitHub Repository](https://github.com/SuyashBorse/Vision_raksha-SIH26-)
+
+4. **VILP (Verified Internship Lifecycle Platform)**
+   - AICTE & NEP-2020 compliant institutional internship governance platform developed for a hackathon by Team PARSU.
+   - Stack: Java Spring Boot backend tasks, PostgreSQL relational data modeling, role-based access control, and SHA-256 certificate verification.
+   - [GitHub Repository](https://github.com/SuyashBorse/VILP)
 
 ---
 
@@ -10,12 +47,13 @@ Designed with a deep-space theme, sticky glassmorphic navigation, accessible mic
 
 | Technology | Role |
 | :--- | :--- |
-| **Next.js 15 (App Router)** | Static export framework and page composition |
-| **TypeScript** | Type-safe project schemas, interfaces, and component props |
-| **Tailwind CSS** | Design tokens, utility classes, and deep-space dark theme |
-| **Framer Motion** | Controlled animations, scroll reveals, and micro-interactions |
+| **Next.js 15 (App Router)** | Modern React framework, Turbopack dev server, and dynamic SSG routes |
+| **TypeScript (Strict)** | End-to-end type safety, project schemas, and component prop definitions |
+| **Tailwind CSS** | Design tokens, custom utilities, and deep-space dark theme |
+| **Framer Motion** | Controlled scroll reveals, bento animations, and micro-interactions |
+| **Three.js / Cobe** | Interactive 3D WebGL globe with India/Maharashtra focus |
 | **Lucide React** | Modern accessible icons and developer monograms |
-| **EmailJS** | Client-side email dispatch with validation and honest fallback |
+| **EmailJS** | Client-side email dispatch with field validation and graceful fallback |
 
 ---
 
@@ -23,32 +61,41 @@ Designed with a deep-space theme, sticky glassmorphic navigation, accessible mic
 
 ```text
 ├── public/
-│   ├── favicon.svg             # Monogram developer favicon
+│   ├── favicon.svg             # Terminal prompt >_ vector favicon
 │   ├── robots.txt              # Search engine crawler instructions
 │   └── sitemap.xml             # Sitemap index
 ├── src/
 │   ├── app/
-│   │   ├── globals.css         # Theme tokens, glassmorphism, reduced-motion rules
-│   │   ├── layout.tsx          # Root document shell, SEO & OpenGraph metadata
-│   │   └── page.tsx            # Composition of all portfolio sections
+│   │   ├── api/                # API routes (GitHub contributions helper)
+│   │   ├── projects/[id]/      # Dynamic project deep-dive showcase pages
+│   │   ├── globals.css         # Theme tokens, glassmorphic styling, keyframe animations
+│   │   ├── icon.svg            # App Router auto-generated favicon
+│   │   ├── layout.tsx          # Root layout shell, SEO, and OpenGraph metadata
+│   │   ├── loading.tsx         # Lightweight route loading fallback
+│   │   └── page.tsx            # Main single-page portfolio composition
 │   ├── components/
 │   │   ├── Navigation.tsx      # Sticky glass navbar with accessible mobile drawer
-│   │   ├── Hero.tsx            # Headline, animated typing sub-headline, and CTAs
-│   │   ├── About.tsx           # Academic & competitive programming background
-│   │   ├── Skills.tsx          # Responsive Bento-box skills grid
-│   │   ├── Projects.tsx        # Project showcase with safe URL placeholders
+│   │   ├── Hero.tsx            # Editorial typography headline: "Suyash Borse — SOFTWARE DEVELOPER"
+│   │   ├── About.tsx           # Bento grid: 3D Globe, dynamic age counter, and social links
+│   │   ├── Globe.tsx           # Interactive WebGL 3D Globe with India focus
+│   │   ├── Skills.tsx          # Dual-row animated marquee + Core CS inventory
+│   │   ├── Projects.tsx        # 2x2 Dino Kupinic style cards with direct deep-dive links
+│   │   ├── Experience.tsx      # Chronological journey, research, and DSA practice
+│   │   ├── AchievementsAndActivity.tsx # CodeChef 1,000+ problems, GitHub repos, SIH qualifier
 │   │   ├── ContactForm.tsx     # Validated contact form with realistic EmailJS states
-│   │   ├── Footer.tsx          # Social links, back-to-top button, and copyright
-│   │   └── SocialIcons.tsx     # Custom SVG developer icons (GitHub, LinkedIn, etc.)
+│   │   ├── CustomCursor.tsx    # Interactive glowing custom cursor
+│   │   ├── Footer.tsx          # Profile shortcuts, back-to-top button, and copyright
+│   │   └── SocialIcons.tsx     # Custom SVG developer icons (GitHub, LinkedIn, CodeChef, LeetCode)
 │   ├── data/
-│   │   ├── projects.ts         # Typed project data records
-│   │   └── socialLinks.ts      # Typed social profiles data
+│   │   ├── projects.ts         # Full project schemas, key features, and deep-dive content
+│   │   ├── projectVisuals.tsx  # Dynamic brand logos & badges for project visual cards
+│   │   └── socialLinks.ts      # Structured developer profile metadata
 │   └── utils/
 │       ├── cn.ts               # Class merging helper (clsx + twMerge)
 │       └── emailjs.ts          # EmailJS client helper with validation
 ├── .env.example                # Safe environment variable placeholders
-├── next.config.mjs             # Next.js configuration (static export configured)
-├── tailwind.config.ts          # Custom color tokens and glow utilities
+├── next.config.mjs             # Next.js configuration
+├── tailwind.config.ts          # Custom color tokens, animations, and glow utilities
 └── tsconfig.json               # TypeScript strict configuration
 ```
 
@@ -76,25 +123,19 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 npm run type-check
 ```
 
-### Production Build & Static Export
+### Production Build
 ```bash
 npm run build
 ```
-Generates pure static HTML, CSS, and JavaScript assets in the `out/` directory.
-
-### Local Preview of Production Build
-```bash
-npm run preview
-```
+Creates an optimized production build with static generation (`.next/`).
 
 ---
 
-## Owner Configuration Guide
+## EmailJS Setup (Contact Form)
 
-### 1. EmailJS Setup (Contact Form)
-1. Sign up at [EmailJS](https://www.emailjs.com/).
-2. Create an Email Service (e.g., Gmail) and note your **Service ID**.
-3. Create an Email Template with variables `{{from_name}}`, `{{reply_to}}`, and `{{message}}`, and note your **Template ID**.
+1. Sign up for a free account at [EmailJS](https://www.emailjs.com/).
+2. Create an Email Service connected to Gmail and copy your **Service ID**.
+3. Create an Email Template with variables `{{from_name}}`, `{{reply_to}}`, and `{{message}}`, and copy your **Template ID**.
 4. In your EmailJS Account Settings, copy your **Public Key**.
 5. Copy `.env.example` to `.env.local`:
    ```bash
@@ -107,28 +148,22 @@ npm run preview
    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key_here
    ```
 
-### 2. Updating Profile & Project Links
-- **Social Profiles:** Open `src/data/socialLinks.ts` and replace the placeholder URLs for LinkedIn, CodeChef, and LeetCode when ready.
-- **Projects:** Open `src/data/projects.ts` to add repository URLs, live demo URLs, or update the description for **EcoPilot AI**.
+---
+
+## Deployment (Vercel)
+
+1. Push your latest code to GitHub:
+   ```bash
+   git push origin main
+   ```
+2. Log in to [vercel.com](https://vercel.com/) with GitHub.
+3. Click **Add New Project** &rarr; select **`SuyashBorse-portfolio`**.
+4. Framework Preset: **Next.js** (detected automatically).
+5. Add your environment variables (`NEXT_PUBLIC_EMAILJS_*`) if configuring EmailJS.
+6. Click **Deploy**. Vercel will automatically build and deploy your site on every push to `main`.
 
 ---
 
-## Deployment Options
+## License
 
-### Option 1: Vercel (Recommended & Easiest)
-1. Go to [vercel.com](https://vercel.com/) and sign in with GitHub.
-2. Click **Add New Project** and select `SuyashBorse-portfolio`.
-3. Framework Preset: **Next.js** (detected automatically).
-4. Add your environment variables (`NEXT_PUBLIC_EMAILJS_*`) in the Vercel dashboard.
-5. Click **Deploy**. Vercel will build and deploy your site on every push to `main`.
-
-### Option 2: GitHub Pages
-Since the project outputs static files to `out/`, you can deploy to GitHub Pages:
-1. In repository **Settings > Pages**, set Source to **GitHub Actions**.
-2. Push your code to GitHub.
-
-### Option 3: Netlify
-1. Connect your GitHub repository to Netlify.
-2. Build command: `npm run build`.
-3. Publish directory: `out`.
-4. Add environment variables under Site configuration.
+© 2026 Suyash Borse. All rights reserved.
